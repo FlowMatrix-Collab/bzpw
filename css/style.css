@@ -485,33 +485,6 @@ a:hover {
   color: #ffffff;
 }
 
-/* Buttons */
-.offer-button {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 4px;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.offer-button--primary {
-  background: #a8d5b5;
-  color: #1f1f1f;
-}
-
-.offer-button--primary:hover {
-  background: #96c7a4;
-}
-
-.offer-button--secondary {
-  background: #ffffff;
-  color: #1f1f1f;
-}
-
-.offer-button--secondary:hover {
-  background: #f0f0f0;
-}
 
 /* =========================
    MOBILE
@@ -523,37 +496,6 @@ a:hover {
 
   .offer-card {
     padding: 2.5rem 1.75rem;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .offers-grid {
-    gap: 1.6rem;
-  }
-
-  /* Bild-Wrapper simulieren */
-  .offer-card::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 140px;
-    margin-bottom: 1.2rem;
-    border-radius: 6px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.95;
-  }
-
-  /* Persönliche Orientierung */
-  .offer-card--light::before {
-    background-image: url("../assets/images/persoenlich.png");
-  }
-
-  /* Berufliche Orientierung */
-  .offer-card--dark::before {
-    background-image: url("../assets/images/beruflich.png");
   }
 }
 
@@ -1153,15 +1095,6 @@ a:hover {
   color: #ffffff;
 }
 
-@media (max-width: 700px) {
-  .nav {
-    min-height: 60px;
-  }
-
-  .nav-logo img {
-    height: 30px;
-  }
-}
 
 
 /* =========================
@@ -1320,16 +1253,6 @@ a:hover {
 
 }
 
-@media (max-width: 700px) {
-
-  .nav-logo img {
-    height: 32px;
-  }
-
-  .nav-cta {
-    align-items: flex-start;
-  }
-}
 
 @media (max-width: 700px) {
 
@@ -1350,29 +1273,11 @@ a:hover {
   }
 
   .offer-card {
-    text-align: left;
+    text-align: center;
     padding: 0;
     overflow: hidden;
   }
 
-  /* Bild kommt nach oben */
-  .offer-card::before {
-    content: "";
-    display: block;
-    height: 160px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* Persönlich */
-  .offer-card--light::before {
-    background-image: url("../assets/images/persoenlich.png");
-  }
-
-  /* Beruflich */
-  .offer-card--dark::before {
-    background-image: url("../assets/images/beruflich.png");
-  }
 
   /* Textbereich */
   .offer-card > * {
@@ -1385,11 +1290,13 @@ a:hover {
   }
 }
 
+
 @media (max-width: 900px) {
   .offer-button {
     margin-top: 1.2rem;
   }
 }
+
 
 /* =========================
    MOBILE HEADER / BURGER
@@ -1434,5 +1341,21 @@ a:hover {
 
   .nav.open .nav-list {
     display: flex;
+  }
+}
+
+/* =========================
+   HEADER – CTA nur im Burger (Mobile)
+   ========================= */
+@media (max-width: 900px) {
+  .nav-cta {
+    display: none;
+  }
+
+  .nav.open .nav-cta {
+    display: flex;
+    padding: 1rem 1.5rem;
+    background: #eef3ee;
+    border-top: 1px solid rgba(0,0,0,0.08);
   }
 }
