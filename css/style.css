@@ -1359,3 +1359,35 @@ a:hover {
     border-top: 1px solid rgba(0,0,0,0.08);
   }
 }
+
+/* =========================
+   OFFERS – Buttons untereinander (Mobile)
+   ========================= */
+@media (max-width: 600px) {
+  .offers-grid .cta-button {
+    display: block;
+    width: 100%;
+    margin-top: 0.8rem;
+  }
+}
+
+/* =========================
+   PROZESS – Text zentrieren (Mobile)
+   ========================= */
+@media (max-width: 600px) {
+  .process-step {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* =========================
+   PROZESS – Bilder kleiner (Mobile)
+   ========================= */
+@media (max-width: 600px) {
+  .process-step img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
