@@ -148,6 +148,22 @@ a:hover {
   max-width: 700px;
 }
 
+@media (max-width: 600px) {
+  .hero-badge {
+    margin-bottom: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .hero-text-only h1 {
+    margin-bottom: 1rem;
+  }
+
+  .hero-text-only p {
+    margin-bottom: 0.8rem;
+  }
+}
+
+
 /* CTA */
 .cta-button {
   display: inline-block;
@@ -950,6 +966,22 @@ a:hover {
 
 }
 
+@media (max-width: 600px) {
+  .faq-list details {
+    padding: 0.75rem 0;
+  }
+
+  .faq-list summary {
+    font-size: 0.95rem;
+  }
+
+  .faq-list details p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
 /* =========================
    COMPACT DIVIDER
    ========================= */
@@ -1146,8 +1178,6 @@ a:hover {
   color: #9a9a9a;
 }
 
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
 
 .divider-compact {
   background: rgba(47, 47, 47, 0.10);
@@ -1192,7 +1222,29 @@ a:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 900px) {
+  .nav-cta {
+    display: block;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
+
+
 /* Mobile: Alternative ausblenden (Header soll ruhig bleiben) */
 @media (max-width: 700px){
   .nav-cta-alt{ display:none; }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 2.4rem 1.25rem;
+  }
+
+  .section + .section {
+    padding-top: 2.8rem;
+  }
 }
