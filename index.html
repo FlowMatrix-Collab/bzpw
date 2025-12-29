@@ -156,6 +156,10 @@
     <span class="footer-sep">·</span>
     <a href="mailto:kontakt@bzpw.de">E-Mail</a>
   </div>
+  <button class="nav-toggle" aria-label="Menü öffnen">
+  ☰
+</button>
+
 </div>
 
 
@@ -335,6 +339,11 @@
 
     <div class="offer-detail-grid">
 
+	  <!-- RECHTER BEREICH: BILD -->
+      <div class="offer-detail-image offer-detail-image--personal">
+        <img src="assets/images/persoenlich.png" alt="Coaching für persönliche Orientierung – Klarheit und innere Ausrichtung">
+      </div>
+
       <!-- LINKER BEREICH: TEXT -->
       <div class="offer-detail-text">
 
@@ -400,14 +409,11 @@
 		<a href="#angebote" class="cta-button cta-secondary">
 			Zu den Angeboten navigieren
 		</a>
-</div>
+		</div>
 
       </div>
 
-      <!-- RECHTER BEREICH: BILD -->
-      <div class="offer-detail-image offer-detail-image--personal">
-        <img src="assets/images/persoenlich.png" alt="Coaching für persönliche Orientierung – Klarheit und innere Ausrichtung">
-      </div>
+      
 
     </div>
 
@@ -792,6 +798,12 @@
   </div>
 </footer>
 
+<script>
+  document.querySelector('.nav-toggle')
+    .addEventListener('click', () => {
+      document.querySelector('.nav').classList.toggle('open');
+    });
+</script>
 
 
 </body>
