@@ -182,7 +182,6 @@ a:hover {
 
 
 
-
 /* =========================
    KONTAKT
    ========================= */
@@ -486,6 +485,7 @@ a:hover {
   color: #ffffff;
 }
 
+
 /* =========================
    MOBILE
    ========================= */
@@ -629,7 +629,11 @@ a:hover {
   gap: 1rem;
   margin-top: 2.2rem;
 }
-
+@media (max-width: 600px) {
+  .offer-cta {
+    flex-direction: column;
+  }
+}
 
 
 /* Basis-Button */
@@ -1287,6 +1291,11 @@ a:hover {
 }
 
 
+@media (max-width: 900px) {
+  .offer-button {
+    margin-top: 1.2rem;
+  }
+}
 
 
 /* =========================
