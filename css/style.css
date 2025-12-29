@@ -1365,8 +1365,8 @@ a:hover {
    ========================= */
 @media (max-width: 600px) {
   .offers-grid .cta-button {
-    display: block;
-    width: 100%;
+    display: inline-flex;
+    width: auto;
     margin-top: 0.8rem;
   }
 }
@@ -1389,5 +1389,18 @@ a:hover {
     max-width: 120px;
     height: auto;
     margin-bottom: 1rem;
+  }
+}
+
+/* =========================
+   OFFER BUTTONS – mobile sauber & kompakt
+   ========================= */
+@media (max-width: 900px) {
+  .offer-card .cta-button {
+    display: inline-flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
