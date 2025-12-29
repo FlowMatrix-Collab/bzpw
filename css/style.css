@@ -1305,24 +1305,6 @@ a:hover {
     overflow: hidden;
   }
 
-  /* Bild kommt nach oben */
-  .offer-card::before {
-    content: "";
-    display: block;
-    height: 160px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* Persönlich */
-  .offer-card--light::before {
-    background-image: url("../assets/images/persoenlich.png");
-  }
-
-  /* Beruflich */
-  .offer-card--dark::before {
-    background-image: url("../assets/images/beruflich.png");
-  }
 
   /* Textbereich */
   .offer-card > * {
