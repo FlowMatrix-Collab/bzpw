@@ -1259,6 +1259,35 @@ a:hover {
   }
 }
 
+/* =========================
+   OFFERS – Mobile Bild über Text
+   ========================= */
+@media (max-width: 900px) {
+
+  .offers-grid {
+    gap: 1.6rem;
+  }
+
+  .offer-card {
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+  }
+
+
+  /* Textbereich */
+  .offer-card > * {
+    padding: 1.4rem 1.4rem 0 1.4rem;
+  }
+
+  .offer-card a {
+    margin-bottom: 1.4rem;
+    display: inline-block;
+  }
+}
+
+
+
 
 /* =========================
    MOBILE HEADER / BURGER
