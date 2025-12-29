@@ -629,11 +629,7 @@ a:hover {
   gap: 1rem;
   margin-top: 2.2rem;
 }
-@media (max-width: 600px) {
-  .offer-cta {
-    flex-direction: column;
-  }
-}
+
 
 
 /* Basis-Button */
