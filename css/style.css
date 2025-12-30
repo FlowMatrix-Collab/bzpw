@@ -455,34 +455,39 @@ a:hover { text-decoration: underline; }
 }
 
 .offer-steps li {
+  counter-increment: step;
   display: grid;
   grid-template-columns: 2.2rem 1fr;
-  column-gap: 1rem;
-  align-items: start;
-
-  counter-increment: step;
+  gap: 1rem;
+  align-items: flex-start;
   margin-bottom: 1.4rem;
-  line-height: 1.45;
 }
 
-/* Nummer */
+.offer-steps li > * {
+  display: block;
+}
+
+.offer-steps li strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+
+
 .offer-steps li::before {
   content: counter(step);
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--primary);
-
   width: 2.2rem;
   height: 2.2rem;
   border-radius: 50%;
   border: 1px solid rgba(63,165,154,0.4);
-
+  color: var(--primary);
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-}
+
 
 .offer-meta {
   margin-top: 1rem;
