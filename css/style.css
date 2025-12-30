@@ -283,7 +283,6 @@ a:hover { text-decoration: underline; }
   margin-top: auto;
   padding-top: 1.6rem;
   display: flex;
-  justify-content: center;
   flex-direction: column;   
   align-items: flex-start;
 
