@@ -1,99 +1,82 @@
+/* ==========================================================
+   BzpW – Refactored Stylesheet
+   Desktop first → Tablet → Mobile
+   (HTML bleibt unverändert)
+   ========================================================== */
+
+/* =========================
+   1) VARIABLES
+   ========================= */
 :root {
-  --primary: #3fa59a;   /* mint / grün */
-  --dark: #4a4a4a;      /* grau */
-  --light: #f7f7f7;
-  --max-width: 1200px;  /* bewusst etwas breiter für Desktop */
-  --text-width: 1200px; /* einheitliche Textbreite */
+  --primary: #3fa59a;            /* mint */
+  --text: #2f2f2f;               /* headings */
+  --body: #5f5f5f;               /* body copy */
+  --header-bg: #eef3ee;          /* header background */
+
+  --card-light: #dbeadf;         /* offers card light */
+  --card-dark: #5a6256;          /* offers card dark */
+
+  --btn-primary-bg: #a8d5b5;
+  --btn-primary-bg-hover: #96c7a4;
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-border: #1f1f1f;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+
+  --max-width: 1200px;
+  --text-width: 1200px;
+  --header-height: 72px;
 }
 
-/* Reset & Basis */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* =========================
+   2) RESET / BASE
+   ========================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Helvetica, Arial, sans-serif;
-  color: var(--dark);
-  background: white;
+    Roboto, Helvetica, Arial, sans-serif;
+  color: var(--body);
+  background: #ffffff;
   line-height: 1.6;
 }
 
+/* Anchor targets should not hide under sticky header */
+section[id] { scroll-margin-top: calc(var(--header-height) + 18px); }
+
+img { max-width: 100%; height: auto; display: block; }
+
 /* =========================
-   SECTIONS – volle Breite
+   3) LAYOUT HELPERS
    ========================= */
 .section {
   width: 100%;
   padding: 4rem 1.5rem;
 }
 
-/* Mehr Luft zwischen aufeinanderfolgenden Sections */
 .section + .section {
   padding-top: 5rem;
 }
 
-
 .section--green {
-  background: linear-gradient(
-    135deg,
-    rgba(63,165,154,0.10),
-    rgba(255,255,255,1)
-  );
+  background: linear-gradient(135deg, rgba(63,165,154,0.10), rgba(255,255,255,1));
 }
 
 .section--white {
   background: #ffffff;
 }
 
-/* =========================
-   CONTAINER – Inhalt
-   ========================= */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
-/* =========================
-   TYPOGRAFIE – klare Hierarchie
-   ========================= */
-
-/* Hauptheadline (Hero & Seitenstart) */
-h1 {
-  font-size: 3.1rem;
-  line-height: 1.2;
-  margin-bottom: 1.6rem;
-  color: #2f2f2f;
-  letter-spacing: -0.01em;
-}
-
-/* Abschnittsüberschriften */
-h2 {
-  font-size: 2.1rem;
-  line-height: 1.3;
-  margin-bottom: 1.2rem;
-  color: #2f2f2f;
-}
-
-/* Unterüberschriften (z. B. Ablauf, Rahmenbedingungen) */
-h3 {
-  font-size: 1.35rem;
-  line-height: 1.35;
-  margin-bottom: 0.6rem;
-  color: #2f2f2f;
-  font-weight: 600;
-}
-
-/* Fließtext */
-p,
-li {
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: #5f5f5f;
-}
-
 
 .text-block {
   max-width: var(--text-width);
@@ -101,37 +84,177 @@ li {
   margin-right: auto;
 }
 
+/* =========================
+   4) TYPOGRAPHY
+   ========================= */
+h1 {
+  font-size: 3.1rem;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 2.1rem;
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+  color: var(--text);
+}
+
+h3 {
+  font-size: 1.35rem;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+p, li {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--body);
+}
 
 /* =========================
-   LINKS
+   5) LINKS
    ========================= */
 a {
   color: var(--primary);
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a:hover { text-decoration: underline; }
+
+/* =========================
+   6) BUTTONS (GLOBAL)
+   ========================= */
+.cta-button {
+  display: inline-flex;            /* fixes vertical/horizontal centering */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.2;
+  white-space: normal;             /* allow wrap when needed */
+}
+
+.cta-primary {
+  background: var(--btn-primary-bg);
+  color: #1f1f1f;
+  border: none;
+}
+
+.cta-primary:hover {
+  background: var(--btn-primary-bg-hover);
+  text-decoration: none;
+}
+
+.cta-secondary {
+  background: var(--btn-secondary-bg);
+  color: #1f1f1f;
+  border: 1px solid var(--btn-secondary-border);
+}
+
+.cta-secondary:hover {
+  background: #f7f7f7;
+  text-decoration: none;
 }
 
 /* =========================
-   HERO
+   7) HEADER / NAVIGATION
    ========================= */
-.hero {
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--header-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+}
+
+.nav-logo img { height: 36px; }
+
+.nav-menu { display: block; }
+
+.nav-list {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-list a {
+  color: #1f2a1f;
+  font-weight: 500;
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border: 1px solid #1f2a1f;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #1f2a1f;
+  background: transparent;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  background: #1f2a1f;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.nav-cta-alt {
+  font-size: 0.82rem;
+  color: var(--body);
+}
+
+.nav-cta-alt a {
+  color: #1f2a1f;
+  text-decoration: none;
+}
+
+.nav-cta-alt a:hover { text-decoration: underline; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #1f2a1f;
+}
+
+/* =========================
+   8) HERO (TEXT ONLY)
+   ========================= */
+.hero-text-only {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-
-.hero-text {
-  max-width: var(--text-width); /* Desktop: bewusst großzügig */
+.hero-text-only .hero-content {
+  max-width: var(--text-width);
 }
 
 .hero-badge {
@@ -144,168 +267,27 @@ a:hover {
   margin-bottom: 1.4rem;
 }
 
-.hero-text p {
-  max-width: 700px;
-}
-
-@media (max-width: 600px) {
-  .hero-badge {
-    margin-bottom: 0.8rem;
-    font-size: 0.7rem;
-  }
-
-  .hero-text-only h1 {
-    margin-bottom: 1rem;
-  }
-
-  .hero-text-only p {
-    margin-bottom: 0.8rem;
-  }
-}
-
-
-/* =========================
-   KONTAKT
-   ========================= */
-.contact {
-  margin-top: 1.5rem;
-}
-
-.whatsapp {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid var(--primary);
-  border-radius: 4px;
-  font-weight: 500;
-}
-
-.whatsapp:hover {
-  background: rgba(63,165,154,0.08);
-}
-
-/* =========================
-   FOOTER
-   ========================= */
-.footer {
-  font-size: 0.9rem;
-  color: #7a7a7a;
-}
-
-/* =========================
-   TABLET
-   ========================= */
-@media (max-width: 1024px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-text {
-    max-width: 720px;
-  }
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2.1rem;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-  }
-
-  p,
-  li {
-    font-size: 0.98rem;
-  }
-
-
-  .hero {
-    padding-top: 3.2rem;
-    padding-bottom: 3.2rem;
-  }
-
-  .hero-text {
-    max-width: 520px;
-  }
-}
-/* =========================
-   HERO IMAGE
-   ========================= */
-.hero-image {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  border-radius: 4px;
-  object-fit: cover;
-  opacity: 0.95;
-}
-
-/* Tablet: Bild bleibt, aber rückt nach unten */
-@media (max-width: 1024px) {
-  .hero-image img {
-    max-width: 480px;
-    margin-top: 2rem;
-  }
-}
-
-/* Mobile: Bild bewusst ausblenden für Ruhe */
-@media (max-width: 600px) {
-  .hero-image {
-    display: none;
-  }
-}
-
-/* =========================
-   HERO – TEXT ONLY
-   ========================= */
-.hero-text-only {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.hero-text-only .hero-content {
-  max-width: var(--text-width);
-}
-
-
 .hero-text-only h1 {
   font-size: 2.5rem;
   line-height: 1.25;
 }
 
-.hero-text-only p {
-  max-width: 100%;
+.hero-text-only p { max-width: 100%; }
+
+.cta-alt {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--body);
+  padding-left: 2rem;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .hero-text-only {
-    padding-top: 2.2rem;     /* vorher 3.2rem */
-    padding-bottom: 2.6rem;
-  }
-
-  .hero-text-only h1 {
-    font-size: 1.85rem;
-  }
-}
+.cta-alt a { color: var(--primary); font-weight: 500; }
 
 /* =========================
-   ZIELGRUPPE / FÜR WEN
+   9) TARGET GROUP
    ========================= */
 .target-group {
   display: grid;
@@ -314,55 +296,11 @@ a:hover {
   align-items: start;
 }
 
-.target-text h2 {
-  margin-bottom: 1.2rem;
-}
-
-.target-text p {
-  max-width: 100%;
-}
-
 .target-list h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #2f2f2f;
 }
 
-.target-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.target-list li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 1.1rem;
-  color: #4a4a4a;
-}
-
-/* ruhiges Icon (statt Emoji/Font-Icon) */
-.target-list li::before {
-  content: "◯";
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
-  color: var(--primary);
-  font-size: 1.1rem;
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-@media (max-width: 900px) {
-  .target-group {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-}
-
-/* =========================
-   ERKENNST DU DICH WIEDER? – SMILEYS
-   ========================= */
 .recognition-list {
   list-style: none;
   padding: 0;
@@ -377,7 +315,6 @@ a:hover {
   line-height: 1.45;
 }
 
-/* Basis-Stil für alle Smileys */
 .recognition-list li::before {
   position: absolute;
   left: 0;
@@ -387,122 +324,31 @@ a:hover {
   color: var(--primary);
 }
 
-/* Variationen – ruhig & nah am Original */
-.recognition-list li:nth-child(1)::before {
-  content: "😐"; /* neutral / orientierungslos */
-}
-
-.recognition-list li:nth-child(2)::before {
-  content: "😕"; /* nachdenklich / festgefahren */
-}
-
-.recognition-list li:nth-child(3)::before {
-  content: "😶"; /* innere Widersprüche */
-}
-
-.recognition-list li:nth-child(4)::before {
-  content: "😟"; /* gebremst / belastet */
-}
-
-.recognition-list li:nth-child(5)::before {
-  content: "🙂"; /* Wunsch nach Klarheit */
-}
+.recognition-list li:nth-child(1)::before { content: "😐"; }
+.recognition-list li:nth-child(2)::before { content: "😕"; }
+.recognition-list li:nth-child(3)::before { content: "😶"; }
+.recognition-list li:nth-child(4)::before { content: "😟"; }
+.recognition-list li:nth-child(5)::before { content: "🙂"; }
 
 /* =========================
-   ANGEBOTE
+   10) OFFERS (COACHING-BOXEN)
    ========================= */
-.offers-header {
-  margin: 0 auto 3.5rem auto; /* Block zentriert */
-  text-align: left;         /* Text zentriert */
-}
-
-.offers-header h2 {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.offers-header p {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.offers-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-
-}
-
-/* Karten */
-.offer-card {
-  padding: 3rem 2.5rem;
-  border-radius: 8px;
-}
-
-.offer-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1.4rem;
-}
-
-/* Helle Karte */
-.offer-card--light {
-  background: #dbeadf;
-}
-
-.offer-card--light h3,
-.offer-card--light p {
-  color: #2f2f2f;
-}
-
-/* Dunklere Karte */
-.offer-card--dark {
-  background: #5a6256;
-}
-
-.offer-card--dark h3,
-.offer-card--dark p {
-  color: #ffffff;
-}
-
-
-/* =========================
-   MOBILE
-   ========================= */
-@media (max-width: 900px) {
-  .offers-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .offer-card {
-    padding: 2.5rem 1.75rem;
-  }
-}
-
-
-/* =========================
-   ANGEBOTE – wie Screenshot
-   ========================= */
-
 .offers-title {
-  text-align: center;      /* Überschrift mittig */
+  text-align: center;
   margin-bottom: 1.25rem;
 }
 
-/* Textblock ist mittig, Text darin linksbündig */
 .offers-intro {
-  max-width: var(--text-width);        /* etwas breiter wie im Screenshot */
+  max-width: var(--text-width);
   margin: 0 auto;
   text-align: left;
 }
 
-/* Der Intro-Text soll nicht zu schmal sein */
 .offers-intro p {
   max-width: 100%;
   margin-bottom: 0.9rem;
 }
 
-/* feiner Strich: über Container-Breite */
 .offers-divider {
   border: 0;
   height: 1px;
@@ -511,7 +357,6 @@ a:hover {
   background: rgba(47, 47, 47, 0.18);
 }
 
-/* Grid der Boxen */
 .offers-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -519,36 +364,44 @@ a:hover {
   align-items: stretch;
 }
 
-/* Mobile */
-@media (max-width: 900px) {
-  .offers-intro {
-    max-width: 100%;
-  }
-
-  .offers-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
-/* Box-Überschriften zentrieren (nur h3 in den Angebots-Boxen) */
-.offers-grid .offer-card h3 {
-  text-align: center;
-  width: 100%;
-}
-
-.offers-grid .offer-card {
+.offer-card {
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-md);
   text-align: center;
 }
 
-.offers-grid .offer-card p {
-  text-align: left; /* Text bleibt linksbündig in der Box */
+.offer-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.offer-card p { text-align: left; }
+
+.offer-card .cta-button {
+  margin-top: 1.4rem;
+}
+
+.offer-card--light {
+  background: var(--card-light);
+}
+
+.offer-card--light h3,
+.offer-card--light p {
+  color: var(--text);
+}
+
+.offer-card--dark {
+  background: var(--card-dark);
+}
+
+.offer-card--dark h3,
+.offer-card--dark p {
+  color: #ffffff;
 }
 
 /* =========================
-   ANGEBOT DETAILSEITE
+   11) OFFER DETAILS (ZIELKLÄRUNG)
    ========================= */
-
 .offer-detail-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -556,9 +409,11 @@ a:hover {
   align-items: start;
 }
 
-.offer-detail-text h2 {
-  margin-bottom: 1.4rem;
+.offer-detail-grid--reverse {
+  grid-template-columns: 0.9fr 1.1fr;
 }
+
+.offer-detail-text h2 { margin-bottom: 1.4rem; }
 
 .offer-detail-text h3 {
   margin-top: 2.2rem;
@@ -567,13 +422,13 @@ a:hover {
 
 .offer-steps {
   margin-top: 1.2rem;
-  margin-left: 1.2rem;   /* Einrückung unter Überschrift */
+  margin-left: 1.2rem;
   padding-left: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .offer-steps li {
-  margin-bottom: 1.0rem;
+  margin-bottom: 1rem;
   line-height: 1.45;
 }
 
@@ -583,132 +438,58 @@ a:hover {
   margin-bottom: 0.25rem;
 }
 
-
 .offer-meta {
   margin-top: 1rem;
-  margin-left: 1.2rem;   /* Einrückung unter Überschrift */
+  margin-left: 1.2rem;
   padding-left: 1.2rem;
   margin-bottom: 0.5rem;
   list-style: disc;
 }
-
 
 .offer-meta li {
   margin-bottom: 0.6rem;
   line-height: 1.45;
 }
 
-/* =========================
-   CTA – ruhig & zentriert
-   ========================= */
-
 .offer-cta {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   gap: 1rem;
   margin-top: 2.2rem;
 }
-@media (max-width: 600px) {
-  .offer-cta {
-    flex-direction: column;
-  }
-}
-
-
-/* Basis-Button */
-.cta-button {
-  display: inline-block;      /* nur so breit wie Text */
-  padding: 0.75rem 1.6rem;
-  border-radius: 4px;
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-}
-
-/* Primär: Grün */
-.cta-primary {
-  background: #a8d5b5;
-  color: #1f1f1f;
-  border: none;
-}
-
-.cta-primary:hover {
-  background: #96c7a4;
-}
-
-/* Sekundär: Weiß mit schwarzem Rand */
-.cta-secondary {
-  background: #ffffff;
-  color: #1f1f1f;
-  border: 1px solid #1f1f1f;
-}
-
-.cta-secondary:hover {
-  background: #f7f7f7;
-}
-
-/* =========================
-   ANGEBOT DETAIL – gespiegelt
-   ========================= */
-
-/* Bild links, Text rechts */
-.offer-detail-grid--reverse {
-  grid-template-columns: 0.9fr 1.1fr;
-}
-
-/* Mobile: weiterhin Bild oben */
-@media (max-width: 900px) {
-  .offer-detail-grid--reverse {
-    grid-template-columns: 1fr;
-  }
-
-  .offer-detail-grid--reverse .offer-detail-image {
-    order: -1;
-  }
-}
-
-/* =========================
-   OFFER DETAIL – BILD FLÄCHIG
-   ========================= */
 
 .offer-detail-image {
-  position: relative;   
+  position: relative;
   display: flex;
   align-items: stretch;
   height: 100%;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
 }
 
 .offer-detail-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   filter: saturate(0.9) contrast(0.95);
 }
+
 .offer-detail-image--personal img {
-  filter:
-    saturate(0.85)
-    brightness(1.05)
-    hue-rotate(-10deg);
+  filter: saturate(0.85) brightness(1.05) hue-rotate(-10deg);
 }
 
 .offer-detail-image--personal::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(168, 213, 181, 0.18); /* dein Mint */
+  background: rgba(168, 213, 181, 0.18);
   pointer-events: none;
 }
 
 .offer-detail-image--business img {
-  filter:
-    saturate(0.5)
-    brightness(0.98)
-    contrast(1.05);
+  filter: saturate(0.5) brightness(0.98) contrast(1.05);
 }
+
 .offer-detail-image--business::after {
   content: "";
   position: absolute;
@@ -717,29 +498,9 @@ a:hover {
   pointer-events: none;
 }
 
-
-/* Mobile */
-@media (max-width: 900px) {
-  .offer-detail-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .offer-detail-image {
-    height: auto;
-    margin-top: 2rem;
-  }
-
-  .offer-detail-image img {
-    height: auto;
-  }
-}
-
-
-
 /* =========================
-   ÜBER MICH
+   12) ABOUT
    ========================= */
-
 .about-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -747,7 +508,6 @@ a:hover {
   align-items: start;
 }
 
-/* kleiner Name oberhalb der Headline */
 .about-eyebrow {
   display: inline-block;
   font-size: 0.9rem;
@@ -755,43 +515,21 @@ a:hover {
   margin-bottom: 0.6rem;
 }
 
-.about-text h2 {
-  margin-bottom: 1.4rem;
-}
+.about-text h2 { margin-bottom: 1.4rem; }
 
-.about-text p {
-  max-width: 680px;
-}
+.about-text p { max-width: 680px; }
 
-/* CTA */
-.about-cta {
-  margin-top: 2rem;
-}
+.about-cta { margin-top: 2rem; }
 
-/* Bild */
 .about-image img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   object-fit: cover;
 }
 
 /* =========================
-   MOBILE
+   13) PROCESS
    ========================= */
-@media (max-width: 900px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-image {
-    order: -1;
-  }
-}
-
-/* =========================
-   ZUSAMMENARBEIT / PROZESS
-   ========================= */
-
 .process-title {
   text-align: center;
   margin-bottom: 3rem;
@@ -805,13 +543,25 @@ a:hover {
 }
 
 .process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
 }
 
 .process-step img {
   width: 100%;
-  max-width: 180px;
-  margin-bottom: 1.4rem;
+  max-width: 220px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 1.6rem;
+}
+
+@media (min-width: 1200px) {
+  .process-step img {
+    max-width: 260px;
+    height: 200px;
+  }
 }
 
 .process-label {
@@ -821,72 +571,26 @@ a:hover {
   margin-bottom: 0.4rem;
 }
 
-.process-step h3 {
-  margin-bottom: 0.9rem;
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .process-step img {
-    max-width: 140px;
-  }
-}
+.process-step h3 { margin-bottom: 0.9rem; }
 
 /* =========================
-   PROZESS – AUSRICHTUNG FIX
+   14) FAQ
    ========================= */
-
-/* Jeder Schritt gleich aufgebaut */
-.process-step {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* Einheitlicher Bildbereich */
-.process-step img {
-  width: 100%;
-  max-width: 220px;      /* Bilder deutlich größer */
-  height: 180px;         /* gleiche Höhe für alle */
-  object-fit: contain;   /* nichts wird abgeschnitten */
-  margin-bottom: 1.6rem;
-}
-
-/* Optional: auf großen Screens noch etwas größer */
-@media (min-width: 1200px) {
-  .process-step img {
-    max-width: 260px;
-    height: 200px;
-  }
-}
-
-/* =========================
-   FAQ – wie Angebote
-   ========================= */
-
 .faq {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
 }
 
-/* Intro-Bereich (Überschrift + Text) */
-.faq-intro {
-  margin: 0 auto 2.5rem auto;
-}
-
-/* Überschrift mittig */
 .faq-title h2 {
   text-align: center;
   margin-bottom: 1.2rem;
 }
 
-/* Textblock: zentriert, Text linksbündig */
+.faq-intro {
+  margin: 0 auto 2.5rem auto;
+}
+
 .faq-intro p {
   margin-left: auto;
   margin-right: auto;
@@ -895,7 +599,6 @@ a:hover {
   margin-bottom: 1.2rem;
 }
 
-/* FAQ-Liste */
 .faq-list {
   border-top: 1px solid rgba(0,0,0,0.15);
   margin-top: 0.6rem;
@@ -912,17 +615,265 @@ a:hover {
   list-style: none;
 }
 
-.faq-list summary::-webkit-details-marker {
-  display: none;
+.faq-list summary::-webkit-details-marker { display: none; }
+
+.faq-list details p { margin-top: 0.2rem; }
+
+/* =========================
+   15) FOOTER
+   ========================= */
+.footer {
+  background: linear-gradient(to top, #f3f7f3 0%, #ffffff 100%);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.faq-list details p {
-  margin-top: 0.2rem;
- 
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
 
+.footer-logo img { height: 36px; width: auto; }
+
+.footer-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #6f6f6f;
+}
+
+.footer,
+.footer a {
+  color: #4a4a4a;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.footer a:hover { text-decoration: underline; }
+
+.footer-sep {
+  margin: 0 0.35rem;
+  color: #9a9a9a;
+}
+
+/* =========================
+   16) LEGAL PAGES
+   ========================= */
+.legal { max-width: 760px; }
+
+.legal h2 {
+  text-align: left;
+  margin-bottom: 2.2rem;
+}
+
+.legal h3 {
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.legal p {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.legal address,
+.legal p strong {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* ==========================================================
+   TABLET (<= 1024px / <= 900px)
+   ========================================================== */
+
+@media (max-width: 1024px) {
+  /* Typography */
+  h1 { font-size: 2.6rem; }
+
+  /* Layout */
+  .hero-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  /* Target group */
+  .target-group {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Offers */
+  .offers-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .offer-card {
+    padding: 2.5rem 1.75rem;
+  }
+
+  /* Offer detail layouts */
+  .offer-detail-grid,
+  .offer-detail-grid--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-detail-grid--reverse .offer-detail-image {
+    order: -1;
+  }
+
+  .offer-detail-image {
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .offer-detail-image img {
+    height: auto;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image { order: -1; }
+
+  /* Process */
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Mobile header / burger */
+  .nav {
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .nav-list li {
+    padding: 0.6rem 1.5rem;
+  }
+
+  .nav.open .nav-list {
+    display: flex;
+  }
+
+  /* CTA only inside open burger */
+  .nav-cta {
+    display: none;
+  }
+
+  .nav.open .nav-cta {
+    display: flex;
+    padding: 1rem 1.5rem;
+    background: var(--header-bg);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    align-items: stretch;
+  }
+}
+
+/* ==========================================================
+   MOBILE (<= 700px / <= 600px)
+   ========================================================== */
+
+@media (max-width: 700px) {
+  .nav-cta-alt { display: none; }
 }
 
 @media (max-width: 600px) {
+  /* Spacing */
+  .section {
+    padding: 2.4rem 1.25rem;
+  }
+
+  .section + .section {
+    padding-top: 2.8rem;
+  }
+
+  /* Typography */
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.7rem; }
+  h3 { font-size: 1.25rem; }
+  p, li { font-size: 0.98rem; }
+
+  /* Hero */
+  .hero-text-only {
+    padding-top: 2.2rem;
+    padding-bottom: 2.6rem;
+  }
+
+  .hero-badge {
+    margin-bottom: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .hero-text-only h1 {
+    margin-bottom: 1rem;
+    font-size: 1.85rem;
+  }
+
+  .hero-text-only p { margin-bottom: 0.8rem; }
+
+  /* Offers cards: keep clean padding & centered button */
+  .offer-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .offer-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .offer-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+
+  /* Offer CTAs: stacked, but NOT full-width */
+  .offer-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-cta .cta-button {
+    margin-top: 0;
+  }
+
+  /* Process: center + smaller images */
+  .process-step {
+    align-items: center;
+    text-align: center;
+  }
+
+  .process-step img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  /* FAQ spacing */
   .faq-list details {
     padding: 0.75rem 0;
   }
@@ -935,443 +886,3 @@ a:hover {
     font-size: 0.9rem;
   }
 }
-
-
-
-/* =========================
-   COMPACT DIVIDER
-   ========================= */
-
-.divider-compact {
-  border: 0;
-  height: 1px;
-  background: rgba(47, 47, 47, 0.15);
-  margin: 0.6rem 0 0.1rem 0;
-}
-/* =========================
-   FOOTER – mit Logo
-   ========================= */
-
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.9rem;
-}
-
-.footer-logo img {
-  height: 36px;
-  width: auto;
-  display: block;
-}
-
-.footer-name {
-  font-weight: 600;
-  color: #2f2f2f;
-}
-
-.footer-copy {
-  font-size: 0.9rem;
-  color: #7a7a7a;
-}
-
-.footer-links {
-  font-size: 0.85rem;
-}
-
-.footer-sep {
-  margin: 0 0.35rem;
-  color: #9a9a9a;
-}
-
-/* =========================
-   RECHTLICHE SEITEN
-   ========================= */
-
-.legal {
-  max-width: 760px;        /* exakt wie ruhige Textbereiche */
-}
-
-/* Überschrift */
-.legal h2 {
-  text-align: left;
-  margin-bottom: 2.2rem;
-}
-
-/* Unterüberschriften */
-.legal h3 {
-  margin-top: 2.4rem;
-  margin-bottom: 0.8rem;
-}
-
-/* Fließtext */
-.legal p {
-  max-width: 100%;
-  margin-bottom: 1rem;
-}
-
-/* Kontakt- / Adressblöcke */
-.legal address,
-.legal p strong {
-  display: block;
-  margin-bottom: 0.4rem;
-}
-
-/* Links */
-.legal a {
-  color: var(--primary);
-}
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #eef3ee;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 72px;
-}
-
-.nav-logo img {
-  height: 36px;
-}
-
-.nav-list {
-  display: flex;
-  gap: 28px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list a {
-  text-decoration: none;
-  font-weight: 500;
-  color: #1f2a1f;
-}
-
-.nav-list a:hover {
-  text-decoration: underline;
-}
-
-.nav-button {
-  padding: 10px 18px;
-  border: 1px solid #1f2a1f;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  color: #1f2a1f;
-  background: transparent;
-}
-
-.nav-button:hover {
-  background: #1f2a1f;
-  color: #ffffff;
-}
-
-
-
-/* =========================
-   FOOTER – ruhiger grauer Abschluss (wie Header)
-   ========================= */
-
-.footer {
-  background: linear-gradient(
-    to top,
-    #f3f7f3 0%,
-    #ffffff 100%
-  );
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-/* Innenlayout */
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.5rem;
-}
-
-/* Logo */
-.footer-logo img {
-  height: 36px;
-  width: auto;
-  display: block;
-}
-
-/* Name */
-.footer-name {
-  font-weight: 600;
-  color: #2f2f2f;
-}
-
-/* Copyright / Text */
-.footer-copy {
-  font-size: 0.9rem;
-  color: #6f6f6f;
-}
-
-/* Links */
-.footer,
-.footer a {
-  color: #4a4a4a;
-  font-size: 0.85rem;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* Trenner */
-.footer-sep {
-  margin: 0 0.35rem;
-  color: #9a9a9a;
-}
-
-
-.divider-compact {
-  background: rgba(47, 47, 47, 0.10);
-  margin-bottom: 0;
-}
-
-.cta-alt{
-  display: block;
-  width: 100%;
-  text-align: left;
-  margin-top: 0.6rem;
-  font-size: 0.9rem;
-  color: #5f5f5f;
-  padding-left: 2rem
-}
-
-.cta-alt a{
-  color: var(--primary);
-  font-weight: 500;
-}
-
-
-
-.nav-cta{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.35rem;
-}
-
-.nav-cta-alt{
-  font-size: 0.82rem;
-  color: #5f5f5f;
-}
-
-.nav-cta-alt a{
-  color: #1f2a1f;
-  text-decoration: none;
-}
-
-.nav-cta-alt a:hover{
-  text-decoration: underline;
-}
-
-@media (max-width: 700px) {
-  .nav-cta {
-    align-items: stretch;
-  }
-
-  .nav-button {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-
-/* Mobile: Alternative ausblenden (Header soll ruhig bleiben) */
-@media (max-width: 700px){
-  .nav-cta-alt{ display:none; }
-}
-
-@media (max-width: 600px) {
-  .section {
-    padding: 2.4rem 1.25rem;
-  }
-
-  .section + .section {
-    padding-top: 2.8rem;
-  }
-}
-
-/* =========================
-   OFFERS – MOBILE FIX
-   ========================= */
-@media (max-width: 600px) {
-
-  /* Cards kompakter */
-  .offer-card {
-    padding: 2rem 1.5rem;
-  }
-
-  /* Überschrift etwas kleiner */
-  .offer-card h3 {
-    font-size: 1.35rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Text enger */
-  .offer-card p {
-    font-size: 0.95rem;
-    margin-bottom: 0.7rem;
-  }
-
-}
-
-
-@media (max-width: 700px) {
-
-  .nav-button {
-    padding: 8px 14px;
-    font-size: 0.88rem;
-    border-radius: 5px;
-  }
-}
-
-/* =========================
-   OFFERS – Mobile Bild über Text
-   ========================= */
-@media (max-width: 900px) {
-
-  .offers-grid {
-    gap: 1.6rem;
-  }
-
-  .offer-card {
-    text-align: center;
-    padding: 0;
-    overflow: hidden;
-  }
-
-
-  /* Textbereich */
-  .offer-card > * {
-    padding: 1.4rem;
-  }
-
-  .offer-button-wrap {
-    padding: 1.2rem 0 1.6rem; /* eigenes Padding */
-  }
-
-}
-
-
-
-/* =========================
-   MOBILE HEADER / BURGER
-   ========================= */
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: #1f2a1f;
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-
-  .nav-list {
-    display: none;
-    position: absolute;
-    top: 72px;
-    left: 0;
-    right: 0;
-    background: #eef3ee;
-    flex-direction: column;
-    gap: 0;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-  }
-
-  .nav-list li {
-    padding: 0.6rem 1.5rem;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav {
-    position: relative;
-  }
-
-  .nav.open .nav-list {
-    display: flex;
-  }
-}
-
-/* =========================
-   HEADER – CTA nur im Burger (Mobile)
-   ========================= */
-@media (max-width: 900px) {
-  .nav-cta {
-    display: none;
-  }
-
-  .nav.open .nav-cta {
-    display: flex;
-    padding: 1rem 1.5rem;
-    background: #eef3ee;
-    border-top: 1px solid rgba(0,0,0,0.08);
-  }
-}
-
-/* =========================
-   PROZESS – Text zentrieren (Mobile)
-   ========================= */
-@media (max-width: 600px) {
-  .process-step {
-    align-items: center;
-    text-align: center;
-  }
-}
-
-/* =========================
-   PROZESS – Bilder kleiner (Mobile)
-   ========================= */
-@media (max-width: 600px) {
-  .process-step img {
-    max-width: 120px;
-    height: auto;
-  }
-}
-
-
-
-/* =========================
-   OFFER BUTTON – mobile korrekt zentriert
-   ========================= */
-@media (max-width: 900px) {
-  .offer-button-wrap {
-    display: flex;
-   
-    
-  }
-
-  .offer-button-wrap .cta-button {
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    margin: 0;
-    text-align: center;
-  }
-}
-
