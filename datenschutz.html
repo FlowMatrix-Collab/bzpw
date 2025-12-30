@@ -187,6 +187,16 @@
 
   </div>
 </footer>
+<script>
+  const nav = document.querySelector('.nav');
+  const navLinks = document.querySelectorAll('.nav-list a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+    });
+  });
+</script>
 
 </body>
 </html>
