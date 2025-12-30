@@ -448,46 +448,22 @@ a:hover { text-decoration: underline; }
 }
 
 .offer-steps {
-  list-style: none;
-  margin: 1.8rem 0 2.4rem 0;
-  padding: 0;
-  counter-reset: step;
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .offer-steps li {
-  counter-increment: step;
-  display: grid;
-  grid-template-columns: 2.2rem 1fr;
-  gap: 1rem;
-  align-items: flex-start;
-  margin-bottom: 1.4rem;
-}
-
-.offer-steps li > * {
-  display: block;
+  margin-bottom: 1rem;
+  line-height: 1.45;
 }
 
 .offer-steps li strong {
-  display: block;
-  margin-bottom: 0.2rem;
-}
-
-
-
-.offer-steps li::before {
-  content: counter(step);
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 50%;
-  border: 1px solid rgba(63,165,154,0.4);
-  color: var(--primary);
+  display: inline-block;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 0.25rem;
 }
-
-
 
 .offer-meta {
   margin-top: 1rem;
