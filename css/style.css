@@ -890,7 +890,7 @@ a:hover { text-decoration: underline; }
   /* Process: center + smaller images */
   .process-step {
     align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
   .process-step img {
@@ -900,8 +900,6 @@ a:hover { text-decoration: underline; }
 	max-height: 220px;
 	object-fit: contain;
     margin-bottom: 1rem;
-	object-fit: cover;
-    border-radius: var(--radius-md);
   }
 
   /* FAQ spacing */
