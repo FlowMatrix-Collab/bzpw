@@ -181,6 +181,8 @@ a:hover { text-decoration: underline; }
   align-items: center;
   justify-content: space-between;
   min-height: var(--header-height);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 .nav-logo img { height: 36px; }
@@ -221,6 +223,7 @@ a:hover { text-decoration: underline; }
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-top: 0.4rem;
   gap: 0.35rem;
 }
 
@@ -255,6 +258,8 @@ a:hover { text-decoration: underline; }
 
 .hero-text-only .hero-content {
   max-width: var(--text-width);
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-badge {
@@ -273,6 +278,15 @@ a:hover { text-decoration: underline; }
 }
 
 .hero-text-only p { max-width: 100%; }
+
+.hero-cta-wrap {
+  margin-top: auto;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 
 .cta-alt {
   display: block;
@@ -368,7 +382,17 @@ a:hover { text-decoration: underline; }
   padding: 3rem 2.5rem;
   border-radius: var(--radius-md);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+
+.offer-button-wrap {
+  margin-top: auto;         
+  padding-top: 1.6rem;
+  display: flex;
+  justify-content: center;
+}
+
 
 .offer-card h3 {
   font-size: 1.5rem;
@@ -377,9 +401,6 @@ a:hover { text-decoration: underline; }
 
 .offer-card p { text-align: left; }
 
-.offer-card .cta-button {
-  margin-top: 1.4rem;
-}
 
 .offer-card--light {
   background: var(--card-light);
@@ -850,6 +871,11 @@ a:hover { text-decoration: underline; }
     font-size: 0.95rem;
     margin-bottom: 0.7rem;
   }
+
+  .hero-cta-wrap {
+  padding-top: 1.6rem;
+  }
+
 
   /* Offer CTAs: stacked, but NOT full-width */
   .offer-cta {
