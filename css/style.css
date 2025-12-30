@@ -1355,18 +1355,7 @@ a:hover {
   }
 }
 
-/* =========================
-   OFFER BUTTONS – mobile sauber & kompakt
-   ========================= */
-@media (max-width: 900px) {
-  .cta-button {
-    display: inline-flex;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-}
+
 
 /* =========================
    OFFER BUTTON – mobile korrekt zentriert
