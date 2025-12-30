@@ -164,24 +164,6 @@ a:hover {
 }
 
 
-/* CTA */
-.cta-button {
-  display: inline-block;
-  margin-top: 1.6rem;
-  padding: 0.75rem 1.6rem;
-  background: #a8d5b5;
-  color: #1f1f1f;
-  font-weight: 500;
-  border-radius: 4px;
-}
-
-.cta-button:hover {
-  background: #96c7a4;
-  text-decoration: none;
-}
-
-
-
 /* =========================
    KONTAKT
    ========================= */
@@ -316,8 +298,6 @@ a:hover {
     padding-top: 2.2rem;     /* vorher 3.2rem */
     padding-bottom: 2.6rem;
   }
-}
-
 
   .hero-text-only h1 {
     font-size: 1.85rem;
@@ -1281,21 +1261,15 @@ a:hover {
 
   /* Textbereich */
   .offer-card > * {
-    padding: 1.4rem 1.4rem 0 1.4rem;
+    padding: 1.4rem;
   }
 
-  .offer-card a {
-    margin-bottom: 1.4rem;
-    display: inline-block;
+  .offer-button-wrap {
+    padding: 1.2rem 0 1.6rem; /* eigenes Padding */
   }
+
 }
 
-
-@media (max-width: 900px) {
-  .offer-button {
-    margin-top: 1.2rem;
-  }
-}
 
 
 /* =========================
@@ -1361,17 +1335,6 @@ a:hover {
 }
 
 /* =========================
-   OFFERS – Buttons untereinander (Mobile)
-   ========================= */
-@media (max-width: 600px) {
-  .offers-grid .cta-button {
-    display: inline-flex;
-    width: auto;
-    margin-top: 0.8rem;
-  }
-}
-
-/* =========================
    PROZESS – Text zentrieren (Mobile)
    ========================= */
 @media (max-width: 600px) {
@@ -1401,6 +1364,26 @@ a:hover {
     width: auto;
     align-items: center;
     justify-content: center;
+    text-align: center;
+  }
+}
+
+/* =========================
+   OFFER BUTTON – mobile korrekt zentriert
+   ========================= */
+@media (max-width: 900px) {
+  .offer-button-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.2rem 0 1.6rem;
+  }
+
+  .offer-button-wrap .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin: 0;
     text-align: center;
   }
 }
