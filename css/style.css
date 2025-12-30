@@ -1388,22 +1388,3 @@ a:hover {
   }
 }
 
-.offer-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.offer-button-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 1.4rem;
-}
-
-.offer-button-wrap .cta-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  text-align: center;
-}
