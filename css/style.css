@@ -895,10 +895,11 @@ a:hover { text-decoration: underline; }
 
   .process-step img {
     max-width: 100%;
-	width: 100%
+	width: 100%;
     height: auto;
 	max-height: 220px;
-	object-fit: contain;
+	object-fit: cover;
+	border-radius: var(--radius-md);
     margin-bottom: 1rem;
   }
 
