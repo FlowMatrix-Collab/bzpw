@@ -146,7 +146,7 @@ a:hover { text-decoration: underline; }
 .cta-primary {
   background: var(--btn-primary-bg);
   color: #1f1f1f;
-  border: none;
+  border: 1px solid #6fbfa6;
 }
 
 .cta-primary:hover {
@@ -283,6 +283,7 @@ a:hover { text-decoration: underline; }
   margin-top: auto;
   padding-top: 1.6rem;
   display: flex;
+  justify-content: left;
   flex-direction: column;   
   align-items: flex-start;
 
@@ -427,13 +428,14 @@ a:hover { text-decoration: underline; }
    ========================= */
 .offer-detail-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 3fr 2fr; /* 60% Text – 40% Bild */
   gap: 4rem;
   align-items: start;
 }
 
+/* Umgekehrte Reihenfolge */
 .offer-detail-grid--reverse {
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 2fr 3fr; /* 40% Bild – 60% Text */
 }
 
 .offer-detail-text h2 { margin-bottom: 1.4rem; }
