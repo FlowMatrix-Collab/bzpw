@@ -283,7 +283,6 @@ a:hover { text-decoration: underline; }
   margin-top: auto;
   padding-top: 1.6rem;
   display: flex;
-  justify-content: left;
   flex-direction: column;   
   align-items: flex-start;
 
@@ -807,21 +806,12 @@ a:hover { text-decoration: underline; }
 
   /* CTA only inside open burger */
   .nav-cta {
-    display: none;
+    display: none !important;
   }
   
-  /* Burger IMMER sichtbar */
-  .nav-toggle {
-    display: block;
-  }
-  
-
+ 
   .nav.open .nav-cta {
-    display: flex;
-    padding: 1rem 1.5rem;
-    background: var(--header-bg);
-    border-top: 1px solid rgba(0,0,0,0.08);
-    align-items: stretch;
+    display: none !important;
   }
 }
 
@@ -830,7 +820,7 @@ a:hover { text-decoration: underline; }
    ========================================================== */
 
 @media (max-width: 700px) {
-  .nav-cta-alt { display: none; }
+  .nav-cta-alt { display: none !important; }
 }
 
 @media (max-width: 600px) {
@@ -886,7 +876,7 @@ a:hover { text-decoration: underline; }
   /* Offer CTAs: stacked, but NOT full-width */
   .offer-cta {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .offer-cta .cta-button {
