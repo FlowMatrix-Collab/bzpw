@@ -486,17 +486,18 @@ a:hover { text-decoration: underline; }
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  aspect-ratio: 4 / 5;   
-  max-height: 520px;
+  min-height: 420px;
 }
+
 
 
 .offer-detail-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  display: block;
 }
+
 
 
 .offer-detail-image--personal img {
@@ -568,7 +569,7 @@ a:hover { text-decoration: underline; }
 }
 
 .process-step {
-  display: flex;
+  display: flex;max-width: 900
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
@@ -586,6 +587,9 @@ a:hover { text-decoration: underline; }
   .process-step img {
     max-width: 260px;
     height: 200px;
+  }
+  .offer-detail-image {
+    min-height: 520px;
   }
 }
 
@@ -760,6 +764,8 @@ a:hover { text-decoration: underline; }
 
   .offer-detail-image img {
     height: auto;
+	aspect-ratio: 4 / 3;
+	min-height: auto;
   }
 
   /* About */
