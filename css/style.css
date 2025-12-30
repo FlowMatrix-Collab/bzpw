@@ -493,7 +493,7 @@ a:hover { text-decoration: underline; }
 }
 
 .offer-detail-image img {
-  width: 100%;
+  width: auto;
   height: auto;
   object-fit: cover;
   filter: saturate(0.9) contrast(0.95);
