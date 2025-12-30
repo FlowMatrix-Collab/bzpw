@@ -284,6 +284,8 @@ a:hover { text-decoration: underline; }
   padding-top: 1.6rem;
   display: flex;
   justify-content: center;
+  flex-direction: column;   
+  align-items: flex-start;
 
 }
 
@@ -295,7 +297,8 @@ a:hover { text-decoration: underline; }
   margin-top: 0.6rem;
   font-size: 0.9rem;
   color: var(--body);
-  padding-left: 2rem;
+  padding-left: 2rem;    
+  width: auto;
 }
 
 .cta-alt a { color: var(--primary); font-weight: 500; }
