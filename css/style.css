@@ -1371,7 +1371,22 @@ a:hover {
 /* =========================
    OFFER BUTTON – mobile korrekt zentriert
    ========================= */
+@media (max-width: 900px) {
+  .offer-button-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 1.2rem 0 1.6rem;
+  }
 
+  .offer-button-wrap .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin: 0;
+    text-align: center;
+  }
+}
 
 .offer-item {
   display: flex;
