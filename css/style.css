@@ -429,7 +429,7 @@ a:hover { text-decoration: underline; }
   display: grid;
   grid-template-columns: 3fr 2fr; /* 60% Text – 40% Bild */
   gap: 4rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 /* Umgekehrte Reihenfolge */
@@ -483,10 +483,10 @@ a:hover { text-decoration: underline; }
 }
 
 .offer-detail-image {
+  display: flex;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  min-height: 420px;
 }
 
 
@@ -569,7 +569,8 @@ a:hover { text-decoration: underline; }
 }
 
 .process-step {
-  display: flex;max-width: 900
+  display: flex;
+  max-width: 900px;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
@@ -582,6 +583,17 @@ a:hover { text-decoration: underline; }
   object-fit: contain;
   margin-bottom: 1.6rem;
 }
+
+@media (min-width: 901px) {
+  .offer-detail-image {
+    height: 100%;
+  }
+
+  .offer-detail-image img {
+    height: 100%;
+  }
+}
+
 
 @media (min-width: 1200px) {
   .process-step img {
