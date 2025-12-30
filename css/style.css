@@ -749,7 +749,7 @@ a:hover { text-decoration: underline; }
     grid-template-columns: 1fr;
   }
 
-  .offer-detail-grid--reverse .offer-detail-image {
+  .offer-detail-image {
     order: -1;
   }
 
@@ -809,6 +809,12 @@ a:hover { text-decoration: underline; }
   .nav-cta {
     display: none;
   }
+  
+  /* Burger IMMER sichtbar */
+  .nav-toggle {
+    display: block;
+  }
+  
 
   .nav.open .nav-cta {
     display: flex;
