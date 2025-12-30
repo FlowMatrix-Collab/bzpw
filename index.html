@@ -120,7 +120,11 @@
 }
 </script>
 
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
   <link rel="stylesheet" href="css/style.css">
+</noscript>
+
 </head>
 <body>
 <header class="site-header">
@@ -128,7 +132,7 @@
 
     <!-- Logo -->
     <a href="index.html" class="nav-logo" aria-label="Zur Startseite">
-      <img src="assets/images/logo_small.png" alt="BzpW Logo">
+      <img src="assets/images/logo_small.png" alt="BzpW Logo" width="140" height="40">
     </a>
 
     <!-- Navigation -->
@@ -401,7 +405,12 @@
       </div>
 
       <div class="offer-detail-image offer-detail-image--personal">
-        <img src="assets/images/persoenlich.webp" alt="Coaching für persönliche Orientierung – Klarheit und innere Ausrichtung">
+        <img
+			src="assets/images/persoenlich.webp" 
+			srcset="assets/images/persoenlich.webp 600w, assets/images/persoenlich.webp 900w"
+			sizes="(max-width: 600px) 100vw, 50vw"
+			alt="Coaching für persönliche Orientierung – Klarheit und innere Ausrichtung"
+			loading="lazy">
       </div>
 
     </div>
@@ -419,7 +428,10 @@
       <!-- LINKER BEREICH: BILD -->
       <div class="offer-detail-image offer-detail-image--business">
         <img src="assets/images/beruflich.webp"
-             alt="Coaching für berufliche Orientierung - Klarheit und Struktur bei beruflichen Entscheidungen">
+			 srcset="assets/images/beruflich.webp 600w, assets/images/beruflich.webp 900w"
+			 sizes="(max-width: 600px) 100vw, 50vw"
+             alt="Coaching für berufliche Orientierung - Klarheit und Struktur bei beruflichen Entscheidungen"
+			 loading="lazy">
       </div>
 
       <!-- RECHTER BEREICH: TEXT -->
@@ -577,7 +589,10 @@
       <!-- BILD -->
       <div class="about-image">
         <img src="assets/images/portrait.webp"
-             alt="Ismail Özkabak – Coach für persönliche Weiterentwicklung">
+			 srcset="assets/images/portrait.webp 600w, assets/images/portrait.webp 900w"
+			 sizes="(max-width: 600px) 100vw, 50vw"
+             alt="Ismail Özkabak – Coach für persönliche Weiterentwicklung"
+			 loading="lazy">
       </div>
 
     </div>
@@ -595,7 +610,12 @@
 
       <!-- Schritt 1 -->
       <div class="process-step">
-        <img src="assets/images/ziele.webp" alt="Zielklärung">
+        <img 
+			src="assets/images/ziele.webp" 
+			srcset="assets/images/ziele.webp 600w, assets/images/ziele.webp 900w"
+			sizes="(max-width: 600px) 100vw, 50vw"
+			alt="Zielklärung"
+			loading="lazy">
 
         <span class="process-label">Schritt 1</span>
         <h3>30-minütiges Kennenlernen</h3>
@@ -615,7 +635,12 @@
 
       <!-- Schritt 2 -->
       <div class="process-step">
-        <img src="assets/images/vision.webp" alt="Strategische Planung">
+        <img 
+			src="assets/images/vision.webp" 
+			srcset="assets/images/vision.webp 600w, assets/images/vision.webp 900w"
+			sizes="(max-width: 600px) 100vw, 50vw"
+			alt="Strategische Planung"
+			loading="lazy">
 
         <span class="process-label">Schritt 2</span>
         <h3>Strategische Planung</h3>
@@ -633,7 +658,11 @@
 
       <!-- Schritt 3 -->
       <div class="process-step">
-        <img src="assets/images/erfolge.webp" alt="Umsetzung und Erfolg">
+        <img src="assets/images/erfolge.webp" 
+			 srcset="assets/images/erfolge.webp 600w, assets/images/erfolge.webp 900w"
+			 sizes="(max-width: 600px) 100vw, 50vw"
+			 alt="Umsetzung und Erfolg"
+			 loading="lazy">
 
         <span class="process-label">Schritt 3</span>
         <h3>Umsetzung &amp; Erfolg</h3>
