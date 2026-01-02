@@ -842,6 +842,34 @@
   });
 </script>
 
+<!-- Matomo (cookieless, DSGVO-konform) -->
+<script>
+  var _paq = window._paq = window._paq || [];
+
+  /* Keine Cookies setzen */
+  _paq.push(['disableCookies']);
+
+  /* IP anonymisieren */
+  _paq.push(['setAnonymizeIp', true]);
+
+  /* DNT respektieren */
+  _paq.push(['setDoNotTrack', true]);
+
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+
+  (function() {
+    var u = "https://bzpw.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u + 'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true;
+    g.src='https://cdn.matomo.cloud/bzpw.matomo.cloud/matomo.js';
+    s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
 
 </body>
 </html>
