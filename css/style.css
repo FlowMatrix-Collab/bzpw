@@ -956,3 +956,17 @@ a:hover { text-decoration: underline; }
     font-size: 0.9rem;
   }
 }
+/* =================================
+   404 PAGE – Footer immer unten
+   ================================= */
+
+body.page-404 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.page-404 main,
+body.page-404 section {
+  flex: 1;
+}
