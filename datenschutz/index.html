@@ -170,39 +170,7 @@
         kein Tracking und keine personenbezogenen Analyse-Tools.
       </p>
 	  
-	  <h2>Analyse-Tool (Matomo)</h2>
 	  
-	  <p>
-	  Diese Website verwendet Matomo, eine datenschutzfreundliche Webanalyse-Software.
-	  Matomo wird ohne Cookies betrieben.
-	  </p>
-	  
-	  <p>
-	  Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO
-	  (berechtigtes Interesse an der Analyse der Nutzung dieser Website).
-	  </p>
-	  
-	  <p>
-	  Es werden keine personenbezogenen Daten gespeichert.
-	  IP-Adressen werden anonymisiert.
-	  </p>
-	  
-	  <p>
-	  Sie können der anonymen Analyse jederzeit widersprechen, indem Sie
-	  die „Do-Not-Track“-Einstellung Ihres Browsers aktivieren.
-	  </p>
-	  
-	  <h3>Widerspruch gegen die Datenerfassung (Opt-out)</h3>
-	  
-	  <p>
-	  Sie können der anonymen Analyse Ihres Nutzungsverhaltens widersprechen.
-	  Wenn Sie der Analyse widersprechen möchten, deaktivieren Sie bitte die folgende Checkbox:
-	  </p>
-	  
-	  <div id="matomo-opt-out"></div>
-
-
-
     </div>
   </section>
 
@@ -247,32 +215,6 @@
     });
   });
 </script>
-
-<!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-
-  _paq.push(['disableCookies']);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-
-  (function() {
-    var u = "https://bzpw.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u + 'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-
-    var d = document,
-        g = d.createElement('script'),
-        s = d.getElementsByTagName('script')[0];
-    g.async = true;
-    g.src = u + 'matomo.js';
-    s.parentNode.insertBefore(g, s);
-  })();
-</script>
-<!-- End Matomo Code -->
-
-<script src="https://bzpw.matomo.cloud/index.php?module=CoreAdminHome&action=optOutJS&language=de&divId=matomo-opt-out"></script>
-
 
 </body>
 </html>
