@@ -970,3 +970,251 @@ body.page-404 main,
 body.page-404 section {
   flex: 1;
 }
+
+/* =========================
+   LINK HUB / STARTSEITE
+   ========================= */
+
+.linkhub-page {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, rgba(63, 165, 154, 0.08), rgba(255, 255, 255, 1));
+}
+
+.linkhub-page * {
+  box-sizing: border-box;
+}
+
+.linkhub {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.linkhub-container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.linkhub-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.linkhub-brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.linkhub-logo {
+  width: 140px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.linkhub-kicker {
+  margin: 0 0 0.85rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary, #3fa59a);
+}
+
+.linkhub-hero h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.35rem;
+  line-height: 1.2;
+  color: var(--text, #1f1f1f);
+}
+
+.linkhub-intro {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--body, #4e4e4e);
+}
+
+.linkhub-links {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 72px;
+  padding: 1.2rem 1.25rem;
+  background: #ffffff;
+  border: 1px solid rgba(31, 31, 31, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.link-card:hover,
+.link-card:focus {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+  border-color: rgba(63, 165, 154, 0.32);
+  outline: none;
+}
+
+.link-card--primary {
+  background: linear-gradient(135deg, rgba(168, 213, 181, 0.34), rgba(255, 255, 255, 1));
+  border-color: rgba(63, 165, 154, 0.22);
+}
+
+.link-card__label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text, #1f1f1f);
+}
+
+.link-card__text {
+  display: block;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  color: var(--body, #4e4e4e);
+}
+
+.linkhub-footer {
+  text-align: center;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--body, #4e4e4e);
+  padding-bottom: 0.5rem;
+}
+
+.linkhub-footer a {
+  color: var(--text, #1f1f1f);
+  text-decoration: none;
+}
+
+.linkhub-footer a:hover,
+.linkhub-footer a:focus {
+  text-decoration: underline;
+}
+
+.footer-sep {
+  display: inline-block;
+  margin: 0 0.45rem;
+  opacity: 0.6;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 900px) {
+  .linkhub {
+    padding: 2.5rem 1rem;
+  }
+
+  .linkhub-hero h1 {
+    font-size: 2rem;
+  }
+
+  .linkhub-intro {
+    font-size: 1rem;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 640px) {
+  .linkhub {
+    padding: 2rem 1rem;
+    align-items: flex-start;
+  }
+
+  .linkhub-container {
+    max-width: 100%;
+  }
+
+  .linkhub-hero {
+    margin-bottom: 1.5rem;
+  }
+
+  .linkhub-logo {
+    width: 120px;
+  }
+
+  .linkhub-kicker {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .linkhub-hero h1 {
+    font-size: 1.7rem;
+    line-height: 1.25;
+  }
+
+  .linkhub-intro {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .linkhub-links {
+    gap: 0.85rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .link-card {
+    min-height: 68px;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+  }
+
+  .link-card__label {
+    font-size: 0.98rem;
+  }
+
+  .link-card__text {
+    font-size: 0.92rem;
+  }
+
+  .linkhub-footer {
+    font-size: 0.88rem;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+@media (max-width: 400px) {
+  .linkhub {
+    padding: 1.5rem 0.85rem;
+  }
+
+  .linkhub-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .link-card {
+    padding: 0.95rem;
+  }
+
+  .link-card__label {
+    font-size: 0.94rem;
+  }
+
+  .link-card__text {
+    font-size: 0.88rem;
+  }
