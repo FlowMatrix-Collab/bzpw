@@ -20,25 +20,63 @@
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="stylesheet" href="/css/style.css">
 </head>
+<body class="page-404">
 
-<body class="linkhub-page">
+<header class="site-header">
+  <div class="container nav">
 
-  <main class="linkhub">
-    <div class="container linkhub-container">
+    <a href="/#hero" class="nav-logo" aria-label="Zur Startseite">
+      <img src="/assets/images/logo_small.png" alt="BzpW Logo" width="140" height="40">
+    </a>
 
-      <!-- HERO -->
-      <section class="linkhub-hero">
-        <p class="linkhub-kicker">COLEON · BZPW</p>
-        <h1>Alles an einem Ort.</h1>
-        <p class="linkhub-intro">
-          Musik zum Fühlen. Struktur zum Verstehen. Wege zum Verändern.
-        </p>
-      </section>
+    <nav class="nav-menu" aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#angebote">Coaching</a></li>
+        <li><a href="/#ueber-mich">Über mich</a></li>
+        <li><a href="/#zusammenarbeit">Zusammenarbeit</a></li>
+        <li><a href="/#faq">Häufige Fragen</a></li>
+      </ul>
+    </nav>
 
-      <!-- LINKS -->
-      <section class="linkhub-links" aria-label="Schnellzugänge">
+    <div class="nav-cta">
+      <a href="https://wa.me/4916091109935?text=Hallo%20Ismail,%20ich%20interessiere%20mich%20für%20ein%20kostenloses%20Kennenlerngespräch."
+         class="nav-button"
+         target="_blank"
+         rel="noopener">
+        Kostenloses Kennenlerngespräch
+      </a>
 
-        <!-- Einstiegssong -->
+      <div class="nav-cta-alt">
+        <a href="tel:+4916091109935">Telefon</a>
+        <span class="footer-sep">·</span>
+        <a href="mailto:kontakt@bzpw.de">E-Mail</a>
+      </div>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="section section--green">
+    <div class="container hero-content">
+
+      <p class="linkhub-kicker">COLEON · BZPW</p>
+      <h1>Alles an einem Ort.</h1>
+      <p class="linkhub-intro">
+        Musik zum Fühlen. Struktur zum Verstehen. Wege zum Verändern.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container hero-content">
+
+      <div class="linkhub-links" aria-label="Schnellzugänge">
+
         <a class="link-card link-card--primary"
            href="https://open.spotify.com/intl-de/track/2T70FA632XvvhYzmE8vsOp?si=5e73c125a7e24a4c"
            target="_blank" rel="noopener">
@@ -46,7 +84,6 @@
           <span class="link-card__text">Direkt den Einstiegssong hören</span>
         </a>
 
-        <!-- Künstlerprofil -->
         <a class="link-card"
            href="https://open.spotify.com/intl-de/artist/6ZJz2AkSmd9AuF45sSr5gC?si=Cuo5O6WzQtyVC2GQYZiLeg"
            target="_blank" rel="noopener">
@@ -54,39 +91,68 @@
           <span class="link-card__text">Weitere Songs entdecken</span>
         </a>
 
-        <!-- Buch -->
         <a class="link-card"
            href="https://amzn.eu/d/09268zx0"
            target="_blank" rel="noopener">
-          <span class="link-card__label">📖 Der Weg zum Ziel</span>
+          <span class="link-card__label">📖 Der Weg zum Ziel – Buch</span>
           <span class="link-card__text">Impulse für Klarheit und Veränderung</span>
         </a>
 
-        <!-- Workshops -->
         <a class="link-card" href="/workshops/">
           <span class="link-card__label">🏫 BZPW – Workshops</span>
           <span class="link-card__text">Struktur, Reflexion und Entwicklung</span>
         </a>
 
-        <!-- Coaching -->
         <a class="link-card" href="/#angebote">
           <span class="link-card__label">🧠 BZPW – Coaching</span>
           <span class="link-card__text">Persönliche & berufliche Orientierung</span>
         </a>
 
-      </section>
-
-      <!-- FOOTER -->
-      <footer class="linkhub-footer">
-        <p>
-          <a href="/impressum/">Impressum</a>
-          <span class="footer-sep">·</span>
-          <a href="/datenschutz/">Datenschutz</a>
-        </p>
-      </footer>
+      </div>
 
     </div>
-  </main>
+  </section>
+
+</main>
+
+<footer class="section footer section--white">
+  <div class="container footer-inner">
+
+    <a class="footer-logo" href="/#hero" aria-label="Zur Startseite">
+      <img src="/assets/images/logo_small.png" alt="BzpW Logo">
+    </a>
+
+    <div class="footer-text">
+      <div class="footer-name">© 2025 BzpW · Ismail Özkabak</div>
+      <div class="footer-links">
+        <a href="/">Startseite</a>
+        <span class="footer-sep">·</span>
+        <a href="/datenschutz/">Datenschutz</a>
+        <span class="footer-sep">·</span>
+        <a href="/impressum/">Impressum</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const nav = document.querySelector('.nav');
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelectorAll('.nav-list a');
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+    });
+  });
+</script>
 
 </body>
 </html>
