@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <link rel="canonical" href="https://bzpw.de/start/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start · DOST</title>
+  <meta name="description" content="Linksammlung von DOST – Für Mensch &amp; Tier.">
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="nav-logo" aria-label="Zur Startseite">
+      <img src="/assets/images/logo_small.png" alt="DOST Logo" width="140" height="40">
+    </a>
+    <nav class="nav-menu" aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/start/">Linksammlung</a></li>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="/" class="nav-button">Zur Hauptseite</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="section section--green">
+    <div class="container hero-content">
+      <span class="hero-badge">Start</span>
+      <h1>Linksammlung</h1>
+      <p>Diese Seite dient als schlanke Übersicht für wichtige Zugänge, Kontaktwege und spätere Ergänzungen.</p>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container offers">
+      <div class="offers-grid">
+        <div class="offer-card offer-card--light">
+          <h3>Hauptseite</h3>
+          <p>Die flyernahe Hauptseite liegt auf der Root-Seite und bildet die zentrale Webpräsenz.</p>
+          <div class="offer-button-wrap"><a class="cta-button cta-primary" href="/">Zur Startseite</a></div>
+        </div>
+        <div class="offer-card offer-card--dark">
+          <h3>Kontakt</h3>
+          <p>Telefon: 0178 / 1905801<br>E-Mail: steffi.dohn@hotmail.de</p>
+        </div>
+        <div class="offer-card offer-card--light">
+          <h3>Rechtliches</h3>
+          <p>Impressum und Datenschutz bleiben separat erreichbar und können später inhaltlich finalisiert werden.</p>
+          <div class="offer-button-wrap"><a class="cta-button cta-primary" href="/impressum/">Impressum</a></div>
+        </div>
+        <div class="offer-card offer-card--dark">
+          <h3>Datenschutz</h3>
+          <p>Die Datenschutzseite ist als eigenes Dokument angelegt und über die Navigation sowie den Footer erreichbar.</p>
+          <div class="offer-button-wrap"><a class="cta-button cta-secondary" href="/datenschutz/">Datenschutz</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="section footer section--white">
+  <div class="container footer-inner">
+    <a class="footer-logo" href="/" aria-label="Zur Startseite"><img src="/assets/images/logo_small.png" alt="DOST Logo"></a>
+    <div class="footer-text">
+      <div class="footer-name">© 2025 DOST · Für Mensch &amp; Tier</div>
+      <div class="footer-links">
+        <a href="/">Startseite</a>
+        <span class="footer-sep">·</span>
+        <a href="/impressum/">Impressum</a>
+        <span class="footer-sep">·</span>
+        <a href="/datenschutz/">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  const nav = document.querySelector('.nav');
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelectorAll('.nav-list a');
+  if (toggle) toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  navLinks.forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+</body>
+</html>
