@@ -970,3 +970,58 @@ body.page-404 main,
 body.page-404 section {
   flex: 1;
 }
+
+
+/* =========================
+   DOST scaffold additions
+   ========================= */
+.flyer-hero {
+  position: relative;
+  min-height: calc(100vh - var(--header-height));
+  background:
+    linear-gradient(rgba(238,243,238,0.42), rgba(238,243,238,0.70)),
+    url('/assets/images/flyer-hero.png') center top / cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.flyer-hero-inner {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.flyer-hero-copy {
+  max-width: 42rem;
+  padding: 2rem 0;
+}
+
+.flyer-hero-copy h1 {
+  margin-bottom: 1rem;
+}
+
+.flyer-hero-copy p {
+  max-width: 36rem;
+}
+
+.legal h1,
+.legal h2,
+.legal h3,
+.flyer-hero-copy h1,
+.offers-title,
+.text-block h2,
+.target-list h3,
+.hero-content h1,
+.hero-content h2 {
+  text-wrap: balance;
+}
+
+@media (max-width: 900px) {
+  .flyer-hero {
+    background-position: 62% top;
+  }
+
+  .flyer-hero-copy {
+    max-width: 100%;
+  }
+}
