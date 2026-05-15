@@ -1017,3 +1017,20 @@ body.page-404 section {
   margin-top: 0.8rem;
   font-size: 0.9rem;
 }
+
+.music-platforms {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.music-platforms .cta-button {
+  min-width: 260px;
+}
+
+@media (max-width: 600px) {
+  .music-platforms {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
