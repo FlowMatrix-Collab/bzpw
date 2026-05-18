@@ -1019,6 +1019,12 @@ body.page-404 section {
   font-size: 0.9rem;
 }
 
+.testimonial-source a {
+  color: #23665f;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
 .music-platforms {
   display: flex;
   gap: 1rem;
