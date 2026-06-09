@@ -1047,17 +1047,17 @@ body.page-404 section {
    ========================= */
 
 .hero-product-image {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
 }
 
 .hero-product-image img {
   width: 100%;
-  max-width: 1100px;
+  max-width: 980px;
   height: auto;
-  border-radius: 24px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.16);
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.14);
 }
 
 @media (max-width: 600px) {
