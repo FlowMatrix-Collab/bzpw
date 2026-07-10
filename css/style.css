@@ -490,8 +490,7 @@ li {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
+  background: radial-gradient(
       circle at 75% 15%,
       rgba(255, 255, 255, 0.22),
       transparent 27%
@@ -1136,5 +1135,192 @@ li {
 @media (max-width: 650px) {
   .direct-call {
     text-align: center;
+  }
+}
+
+/* Kompakter Header/Footer und klare Berufsbezeichnung – Juli 2026 */
+@media (min-width: 901px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr) auto;
+    gap: 28px;
+  }
+
+  .nav-logo {
+    margin-right: 0;
+  }
+
+  .nav-menu {
+    justify-self: start;
+  }
+
+  .nav-list {
+    justify-content: flex-start;
+  }
+}
+
+.hero-portrait figcaption {
+  padding-top: 14px;
+  padding-bottom: 15px;
+}
+
+.footer-shell {
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+  gap: 28px 42px;
+}
+
+.footer-brand {
+  max-width: 320px;
+}
+
+.footer-logo img {
+  width: 118px;
+}
+
+.footer-tagline {
+  margin-top: 7px;
+  max-width: 300px;
+}
+
+.footer-nav {
+  justify-content: start;
+  gap: 10px 26px;
+  padding-top: 5px;
+}
+
+@media (max-width: 1120px) and (min-width: 901px) {
+  .nav {
+    grid-template-columns: 132px minmax(0, 1fr) auto;
+    gap: 20px;
+  }
+
+  .nav-list {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: flex;
+  }
+
+  .nav-logo {
+    margin-right: auto;
+  }
+
+  .footer-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* External profiles and social proof */
+.footer-external {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 6px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.footer-external a {
+  color: var(--green-dark);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.footer-external a:hover,
+.footer-external a:focus-visible {
+  text-decoration: underline;
+}
+
+.review-section {
+  background: #fff;
+}
+
+.review-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.7fr);
+  gap: 38px;
+  align-items: start;
+}
+
+.review-summary {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+
+.review-score {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+
+.review-score strong {
+  color: var(--green-dark);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 1;
+}
+
+.review-score span {
+  font-weight: 700;
+}
+
+.review-quotes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.review-card {
+  margin: 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.review-card p {
+  margin-top: 0;
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.review-card cite {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+.profile-link-row {
+  margin-top: 22px;
+}
+
+.trust-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 30px;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+@media (max-width: 780px) {
+  .review-layout,
+  .review-quotes,
+  .trust-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-external {
+    margin-top: 2px;
   }
 }
