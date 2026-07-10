@@ -293,3 +293,94 @@ p, li { font-size: 1.05rem; }
   .fact-row { display: grid; }
   .fact { width: 100%; }
 }
+
+/* Visuelle Feinabstimmung Juli 2026
+   Ruhigere Kontraste, kompaktere Abschlussbereiche und saubere Inhaltsbreite. */
+
+/* Dunkle Karten werden zu einer dezenten, markentypischen Mint-Fläche. */
+.card.dark {
+  color: var(--body);
+  background: #eef5f1;
+  border-color: #c8ddd2;
+  box-shadow: 0 8px 24px rgba(31, 42, 31, .045);
+}
+.card.dark h2,
+.card.dark h3,
+.card.dark p,
+.card.dark li,
+.card.dark a {
+  color: inherit;
+}
+.card.dark .recognition li {
+  border-bottom-color: #c8ddd2;
+}
+
+/* Abschluss-CTA: kein massiver dunkelgrüner Block mehr. */
+.section-cta {
+  padding-top: clamp(36px, 5vw, 58px);
+  padding-bottom: clamp(58px, 7vw, 84px);
+}
+.cta-band {
+  position: relative;
+  color: var(--body);
+  background: #f4f7f4;
+  border: 1px solid #cadbd0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(31, 42, 31, .055);
+  overflow: hidden;
+}
+.cta-band::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: var(--primary);
+}
+.cta-band h2 { color: var(--text); }
+.cta-band p { color: var(--body); }
+.cta-band .eyebrow,
+.cta-band a:not(.button) {
+  color: var(--primary-dark) !important;
+}
+.cta-band .button-primary {
+  color: #17302c;
+  background: #c7e2d0;
+  border-color: #9dc9ad;
+}
+.cta-band .button-primary:hover {
+  background: #b8d8c3;
+}
+
+/* Das Zitat soll wirken, nicht in Leerraum verschwinden. */
+.quote-section {
+  padding-top: clamp(46px, 5vw, 68px);
+  padding-bottom: clamp(32px, 4vw, 54px);
+}
+.quote-section .quote {
+  max-width: 850px;
+}
+
+/* Kompetenzkarten auf der Über-mich-Seite bleiben in derselben Inhaltsbreite. */
+.section > .container.grid-3 {
+  margin-top: 38px;
+}
+
+@media (max-width: 900px) {
+  .cta-band {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 650px) {
+  .section-cta {
+    padding-top: 32px;
+    padding-bottom: 60px;
+  }
+  .cta-band {
+    padding: 28px 22px;
+  }
+  .quote-section {
+    padding-top: 42px;
+    padding-bottom: 28px;
+  }
+}
