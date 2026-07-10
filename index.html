@@ -34,29 +34,84 @@
       src="https://cloud.umami.is/script.js"
     ></script>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Beratung zur pers&ouml;nlichen Weiterentwicklung (BzpW)",
-        "url": "https://bzpw.de/",
-        "telephone": "+49 160 91109935",
-        "email": "kontakt@bzpw.de",
-        "founder": {
-          "@type": "Person",
-          "name": "Ismail &Ouml;zkabak",
-          "jobTitle": "Consultant, Coach und Autor",
-          "sameAs": [
-            "https://www.linkedin.com/in/ismail-%C3%B6zkabak-82b035381/",
-            "https://www.provenexpert.com/de-de/beratung-zur-persoenlichen-weiterentwicklung-bzpw/"
-          ]
-        },
-        "areaServed": "Deutschland",
-        "sameAs": [
-          "https://www.linkedin.com/in/ismail-%C3%B6zkabak-82b035381/",
-          "https://www.provenexpert.com/de-de/beratung-zur-persoenlichen-weiterentwicklung-bzpw/"
-        ]
-      }
+{
+      "@context": "https://schema.org",
+      "@graph": [
+            {
+                  "@type": "ProfessionalService",
+                  "@id": "https://bzpw.de/#business",
+                  "name": "Beratung zur persönlichen Weiterentwicklung (BzpW)",
+                  "alternateName": "BzpW",
+                  "url": "https://bzpw.de/",
+                  "logo": "https://bzpw.de/assets/images/logo_small.png",
+                  "image": "https://bzpw.de/assets/images/og-image.png",
+                  "telephone": "+49 160 91109935",
+                  "email": "kontakt@bzpw.de",
+                  "priceRange": "60 € pro Sitzung; Erstgespräch kostenlos",
+                  "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Am Gesteiger 16",
+                        "postalCode": "91322",
+                        "addressLocality": "Gräfenberg",
+                        "addressCountry": "DE"
+                  },
+                  "areaServed": [
+                        {
+                              "@type": "City",
+                              "name": "Gräfenberg"
+                        },
+                        {
+                              "@type": "Country",
+                              "name": "Deutschland"
+                        }
+                  ],
+                  "availableLanguage": "de",
+                  "founder": {
+                        "@id": "https://bzpw.de/#ismail-oezkabak"
+                  },
+                  "sameAs": [
+                        "https://www.linkedin.com/in/ismail-%C3%B6zkabak-82b035381/",
+                        "https://www.provenexpert.com/de-de/beratung-zur-persoenlichen-weiterentwicklung-bzpw/"
+                  ]
+            },
+            {
+                  "@type": "Person",
+                  "@id": "https://bzpw.de/#ismail-oezkabak",
+                  "name": "Ismail Özkabak",
+                  "url": "https://bzpw.de/ueber-mich/",
+                  "image": "https://bzpw.de/assets/images/portrait.webp",
+                  "jobTitle": "Consultant, Coach und Autor",
+                  "worksFor": {
+                        "@id": "https://bzpw.de/#business"
+                  },
+                  "sameAs": [
+                        "https://www.linkedin.com/in/ismail-%C3%B6zkabak-82b035381/",
+                        "https://www.provenexpert.com/de-de/beratung-zur-persoenlichen-weiterentwicklung-bzpw/"
+                  ]
+            },
+            {
+                  "@type": "WebSite",
+                  "@id": "https://bzpw.de/#website",
+                  "url": "https://bzpw.de/",
+                  "name": "BzpW",
+                  "inLanguage": "de-DE",
+                  "publisher": {
+                        "@id": "https://bzpw.de/#business"
+                  }
+            }
+      ]
+}
     </script>
+    <meta property="og:site_name" content="BzpW" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:image:width" content="1536" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="BzpW – Beratung zur persönlichen Weiterentwicklung" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Coaching für IT, Projekte & persönliche Klarheit | Ismail
+      Özkabak" />
+    <meta name="twitter:description" content="Coaching für Menschen in IT, Projektarbeit, Consulting und verantwortungsvollen Rollen – sowie für persönliche Themen, bei denen Denken allein nicht mehr weiterhilft." />
+    <meta name="twitter:image" content="https://bzpw.de/assets/images/og-image.png" />
   </head>
   <body>
     <header class="site-header">
