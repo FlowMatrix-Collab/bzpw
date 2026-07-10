@@ -1866,3 +1866,17 @@ html {
     gap: 8px 14px;
   }
 }
+
+/* Mobile: externe und rechtliche Links vor dem Copyright */
+@media (max-width: 900px) {
+  .footer-meta-links {
+    order: 1;
+  }
+
+  .footer-meta-row > span {
+    order: 2;
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+}
