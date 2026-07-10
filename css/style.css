@@ -490,7 +490,8 @@ li {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 75% 15%,
       rgba(255, 255, 255, 0.22),
       transparent 27%
@@ -1213,7 +1214,6 @@ li {
   }
 }
 
-
 /* External profiles and social proof */
 .footer-external {
   display: flex;
@@ -1322,5 +1322,110 @@ li {
 
   .footer-external {
     margin-top: 2px;
+  }
+}
+
+/* Layout-Korrektur v8: ausgewogene Navigation, Footer und gleich hohe Angebotskarten */
+@media (min-width: 901px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 126px minmax(0, 1fr) auto;
+    column-gap: 34px;
+  }
+
+  .nav-logo {
+    margin-right: 0;
+  }
+
+  .nav-menu {
+    min-width: 0;
+  }
+
+  .nav-list {
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+}
+
+#wobei .grid-2 {
+  align-items: stretch;
+}
+
+#wobei .card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+#wobei .recognition {
+  flex: 1 1 auto;
+}
+
+#wobei .card-link {
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--primary-dark);
+}
+
+#wobei .card.dark .card-link {
+  color: var(--primary-dark);
+}
+
+.footer-shell {
+  grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
+  column-gap: 64px;
+  row-gap: 22px;
+}
+
+.footer-brand {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.footer-nav {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  justify-content: stretch;
+  gap: 12px 34px;
+  padding-top: 4px;
+}
+
+.footer-external {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 0;
+  padding-top: 14px;
+  justify-content: flex-start;
+}
+
+.footer-bottom {
+  grid-row: 3;
+}
+
+.cta-band .eyebrow,
+.cta-band a:not(.button) {
+  color: var(--primary-dark);
+}
+
+@media (max-width: 900px) {
+  .footer-brand,
+  .footer-nav,
+  .footer-external,
+  .footer-bottom {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .footer-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-nav {
+    grid-template-columns: 1fr;
   }
 }
