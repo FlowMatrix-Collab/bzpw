@@ -1429,3 +1429,37 @@ li {
     grid-template-columns: 1fr;
   }
 }
+
+/* COLEON profile */
+.coleon-profile {
+  margin: 0;
+  align-self: center;
+}
+
+.coleon-profile img {
+  display: block;
+  width: min(100%, 460px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-inline: auto;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(23, 52, 46, 0.14);
+}
+
+.coleon-profile figcaption {
+  max-width: 460px;
+  margin: 0.8rem auto 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .coleon-profile img,
+  .coleon-profile figcaption {
+    max-width: 420px;
+  }
+}
+
