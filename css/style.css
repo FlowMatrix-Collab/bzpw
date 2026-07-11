@@ -1880,3 +1880,13 @@ html {
     border-top: 1px solid var(--line);
   }
 }
+
+
+/* Angebotsstruktur */
+.offer-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:32px; }
+.offer-card { display:flex; flex-direction:column; height:100%; }
+.offer-card .card-link { margin-top:auto; padding-top:18px; }
+.offer-intro { max-width:760px; }
+.offer-overview-button { margin-top:28px; }
+.small-note { font-size:.92rem; opacity:.82; }
+@media (max-width: 780px) { .offer-grid { grid-template-columns:1fr; gap:16px; } .compact-offers .card { min-height:0; } }
