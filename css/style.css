@@ -1890,3 +1890,23 @@ html {
 .offer-overview-button { margin-top:28px; }
 .small-note { font-size:.92rem; opacity:.82; }
 @media (max-width: 780px) { .offer-grid { grid-template-columns:1fr; gap:16px; } .compact-offers .card { min-height:0; } }
+
+
+/* Finale mobile Fußzeile: bewusst auf Logo, Rechtliches und Copyright reduziert */
+@media (max-width: 900px) {
+  .footer-nav-compact {
+    display: none;
+  }
+
+  .footer-main-row {
+    display: block;
+  }
+
+  .footer-meta-links a[href^="https://"] {
+    display: none;
+  }
+
+  .footer-meta-row {
+    padding-top: 12px;
+  }
+}
