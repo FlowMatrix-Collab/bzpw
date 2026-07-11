@@ -1592,3 +1592,13 @@ html {
     text-align: center;
   }
 }
+
+/* Verlässlicher Wechsel der Inhaltsflächen
+   Die Klassen werden in jeder HTML-Datei bewusst abwechselnd gesetzt. */
+main > .section.section--white {
+  background: var(--white);
+}
+
+main > .section.section--mint {
+  background: #eef5f1;
+}
