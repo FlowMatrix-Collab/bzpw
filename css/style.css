@@ -1910,3 +1910,60 @@ html {
     padding-top: 12px;
   }
 }
+
+/* Mobile Fußzeile: zentriert, ruhig und ohne Trennlinien */
+@media (max-width: 900px) {
+  .footer {
+    padding: 28px 0 24px;
+  }
+
+  .footer-compact {
+    justify-items: center;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .footer-main-row,
+  .footer-meta-row {
+    width: 100%;
+  }
+
+  .footer-main-row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-main-row .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-main-row .footer-logo img {
+    width: 108px;
+  }
+
+  .footer-meta-row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 0;
+    border-top: 0;
+    text-align: center;
+  }
+
+  .footer-meta-links {
+    order: 1;
+    justify-content: center;
+    width: 100%;
+    gap: 8px 20px;
+  }
+
+  .footer-meta-row > span {
+    order: 2;
+    width: 100%;
+    padding-top: 0;
+    border-top: 0;
+    text-align: center;
+  }
+}
