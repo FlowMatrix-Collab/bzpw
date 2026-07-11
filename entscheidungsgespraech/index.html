@@ -1,115 +1,295 @@
 <!doctype html>
+
 <html lang="de">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://bzpw.de/entscheidungsgespraech/" rel="canonical"/>
-<link href="/favicon.ico" rel="icon"/>
-<title>Entscheidungshilfe &amp; Entscheidungsgespräch | BzpW</title>
-<meta content="Fokussiertes Entscheidungsgespräch für persönliche oder berufliche Anliegen: 60 Minuten online oder in Gräfenberg." name="description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://bzpw.de/entscheidungsgespraech/" property="og:url"/>
-<meta content="Entscheidungshilfe &amp; Entscheidungsgespräch | BzpW" property="og:title"/>
-<meta content="Fokussiertes Entscheidungsgespräch für persönliche oder berufliche Anliegen: 60 Minuten online oder in Gräfenberg." property="og:description"/>
-<meta content="https://bzpw.de/assets/images/og-image.png" property="og:image"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<script data-website-id="07f77641-3271-4e2a-b86f-7518a5a38d5b" defer="" src="https://cloud.umami.is/script.js"></script>
-<meta content="BzpW" property="og:site_name"/>
-<meta content="de_DE" property="og:locale"/>
-<meta content="1536" property="og:image:width"/>
-<meta content="1024" property="og:image:height"/>
-<meta content="BzpW, Beratung zur persönlichen Weiterentwicklung" property="og:image:alt"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Entscheidungshilfe &amp; Entscheidungsgespräch | BzpW" name="twitter:title"/>
-<meta content="Fokussiertes Entscheidungsgespräch für persönliche oder berufliche Anliegen: 60 Minuten online oder in Gräfenberg." name="twitter:description"/>
-<meta content="https://bzpw.de/assets/images/og-image.png" name="twitter:image"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://bzpw.de/#business",
-      "name": "Beratung zur persönlichen Weiterentwicklung (BzpW)",
-      "url": "https://bzpw.de/",
-      "telephone": "+49 160 91109935",
-      "email": "kontakt@bzpw.de",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Gräfenberg",
-        "addressCountry": "DE"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "Ismail Özkabak",
-        "jobTitle": "Consultant, Coach und Autor"
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <link href="https://bzpw.de/entscheidungsgespraech/" rel="canonical" />
+    <link href="/favicon.ico" rel="icon" />
+    <title>Entscheidungshilfe &amp; Entscheidungsgespräch | BzpW</title>
+    <meta
+      content="Fokussiertes Entscheidungsgespräch für persönliche oder berufliche Anliegen: 60 Minuten online oder in Gräfenberg."
+      name="description"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="https://bzpw.de/entscheidungsgespraech/" property="og:url" />
+    <meta
+      content="Entscheidungshilfe &amp; Entscheidungsgespräch | BzpW"
+      property="og:title"
+    />
+    <meta
+      content="Fokussiertes Entscheidungsgespräch für persönliche oder berufliche Anliegen: 60 Minuten online oder in Gräfenberg."
+      property="og:description"
+    />
+    <meta
+      content="https://bzpw.de/assets/images/og-image.png"
+      property="og:image"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script
+      data-website-id="07f77641-3271-4e2a-b86f-7518a5a38d5b"
+      defer=""
+      src="https://cloud.umami.is/script.js"
+    ></script>
+    <meta content="BzpW" property="og:site_name" />
+    <meta content="de_DE" property="og:locale" />
+    <meta content="1536" property="og:image:width" />
+    <meta content="1024" property="og:image:height" />
+    <meta
+      content="BzpW, Beratung zur persönlichen Weiterentwicklung"
+      property="og:image:alt"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="Entscheidungshilfe &amp; Entscheidungsgespräch | BzpW"
+      name="twitter:title"
+    />
+    <meta
+      content="Fokussiertes Entscheidungsgespräch für persönliche oder berufliche Anliegen: 60 Minuten online oder in Gräfenberg."
+      name="twitter:description"
+    />
+    <meta
+      content="https://bzpw.de/assets/images/og-image.png"
+      name="twitter:image"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://bzpw.de/#business",
+            "name": "Beratung zur persönlichen Weiterentwicklung (BzpW)",
+            "url": "https://bzpw.de/",
+            "telephone": "+49 160 91109935",
+            "email": "kontakt@bzpw.de",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Gräfenberg",
+              "addressCountry": "DE"
+            },
+            "founder": {
+              "@type": "Person",
+              "name": "Ismail Özkabak",
+              "jobTitle": "Consultant, Coach und Autor"
+            }
+          },
+          {
+            "@type": "Service",
+            "name": "Entscheidungsgespräch",
+            "serviceType": "Coaching zur Entscheidungsfindung",
+            "provider": {
+              "@id": "https://bzpw.de/#business"
+            },
+            "areaServed": "Deutschland",
+            "offers": {
+              "@type": "Offer",
+              "price": "60",
+              "priceCurrency": "EUR",
+              "description": "60 Minuten"
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Service",
-      "name": "Entscheidungsgespräch",
-      "serviceType": "Coaching zur Entscheidungsfindung",
-      "provider": {
-        "@id": "https://bzpw.de/#business"
-      },
-      "areaServed": "Deutschland",
-      "offers": {
-        "@type": "Offer",
-        "price": "60",
-        "priceCurrency": "EUR",
-        "description": "60 Minuten"
-      }
-    }
-  ]
-}
-</script></head>
-<body>
-<header class="site-header">
-<div class="container nav">
-<a aria-label="BzpW Startseite" class="nav-logo" href="/">
-<img alt="BzpW, Beratung zur persönlichen Weiterentwicklung" src="/assets/images/logo_small.png"/>
-</a>
-<nav aria-label="Hauptnavigation" class="nav-menu">
-<ul class="nav-list"><li><a href="/">Startseite</a></li><li><a href="/persoenliche-begleitung/">Persönlich</a></li><li><a href="/berufliche-begleitung/">IT &amp; Beruf</a></li><li><a href="/angebote/">Angebote</a></li><li><a href="/ueber-mich/">Über mich</a></li><li><a href="/impulse/">Impulse</a></li><li><a href="/kontakt/">Kontakt</a></li></ul>
-</nav>
-<a class="nav-button" href="https://wa.me/4916091109935?text=Hallo%20Ismail,%20ich%20möchte%20gerne%20ein%20kostenloses%20Erstgespräch%20vereinbaren." rel="noopener" target="_blank">
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a aria-label="BzpW Startseite" class="nav-logo" href="/">
+          <img
+            alt="BzpW, Beratung zur persönlichen Weiterentwicklung"
+            src="/assets/images/logo_small.png"
+          />
+        </a>
+        <nav aria-label="Hauptnavigation" class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="/">Startseite</a></li>
+            <li><a href="/persoenliche-begleitung/">Persönlich</a></li>
+            <li><a href="/berufliche-begleitung/">IT &amp; Beruf</a></li>
+            <li><a href="/angebote/">Angebote</a></li>
+            <li><a href="/ueber-mich/">Über mich</a></li>
+            <li><a href="/impulse/">Impulse</a></li>
+            <li><a href="/kontakt/">Kontakt</a></li>
+          </ul>
+        </nav>
+        <a
+          class="nav-button"
+          href="https://wa.me/4916091109935?text=Hallo%20Ismail,%20ich%20möchte%20gerne%20ein%20kostenloses%20Erstgespräch%20vereinbaren."
+          rel="noopener"
+          target="_blank"
+        >
           Kostenlos kennenlernen
         </a>
-<button aria-expanded="false" aria-label="Menü öffnen" class="nav-toggle">
+        <button
+          aria-expanded="false"
+          aria-label="Menü öffnen"
+          class="nav-toggle"
+        >
           ☰
         </button>
-</div>
-</header>
-<main>
-<section class="page-hero"><div class="container"><span class="eyebrow">Entscheidungsgespräch</span><h1>Ein konkretes Thema. Eine fokussierte Sitzung. Mehr Klarheit für deinen nächsten Schritt.</h1><p class="lead">Du möchtest eine persönliche oder berufliche Entscheidung strukturiert betrachten. Im Entscheidungsgespräch ordnen wir die wichtigsten Faktoren und entwickeln eine Entscheidung, die zu dir passt.</p><div class="fact-row"><span class="fact">Eine fokussierte Sitzung</span><span class="fact">60 Minuten · 60 €</span><span class="fact">Online oder in Gräfenberg</span></div></div></section>
-<section class="section"><div class="container split"><div><span class="eyebrow">Geeignet für dich, wenn …</span><h2>Du möchtest aus Gedanken eine klare Entscheidung machen.</h2><ul class="recognition"><li>mehrere Möglichkeiten gleichzeitig sinnvoll erscheinen</li><li>Gefühl und Vernunft unterschiedliche Richtungen zeigen</li><li>du mögliche Folgen realistisch einschätzen möchtest</li><li>du dich auf ein wichtiges Gespräch vorbereitest</li><li>du einen beruflichen oder persönlichen Wechsel erwägst</li></ul></div><img alt="Weg mit einer Abzweigung als Symbol für eine Entscheidung" src="/assets/images/persoenlich.webp"/></div></section>
-<section class="section section-soft"><div class="container"><span class="eyebrow">In der Sitzung</span><div class="grid-3"><div class="card"><h3>Situation ordnen</h3><p>Wir sammeln Fakten, Gedanken, Gefühle und Interessen, die deine Entscheidung beeinflussen.</p></div><div class="card"><h3>Optionen prüfen</h3><p>Wir betrachten Möglichkeiten, Auswirkungen und das, was dir persönlich wichtig ist.</p></div><div class="card"><h3>Schritt festlegen</h3><p>Du gehst mit einer klareren Einschätzung und einem konkreten nächsten Schritt.</p></div></div></div></section>
-<section class="section section-cream"><div class="container grid-2"><div><span class="eyebrow">Rahmen</span><h2>Gezielt und mit freier Entscheidung über alles Weitere.</h2><p class="price">60 €</p><p>für 60 Minuten. Das kostenlose Kennenlernen dauert 30 Minuten. Danach entscheidest du in Ruhe, ob du das Gespräch buchen möchtest.</p></div><div class="card"><h3>Weitere Begleitung</h3><p>Manche Entscheidungen öffnen ein größeres Thema. In diesem Fall können wir anschließend im Rahmen der persönlichen oder beruflichen Begleitung weiterarbeiten.</p><p><a class="card-link" href="/angebote/">Alle Angebote ansehen →</a></p></div></div></section>
-<section class="section section-cta"><div class="container cta-band"><div><h2>Welche Entscheidung beschäftigt dich?</h2><p>Du kannst dein Anliegen im kostenlosen Kennenlernen kurz schildern.</p></div><div><a class="button button-primary" href="https://wa.me/4916091109935?text=Hallo%20Ismail,%20ich%20m%C3%B6chte%20gerne%20ein%20kostenloses%20Erstgespr%C3%A4ch%20vereinbaren." rel="noopener" target="_blank">Kennenlernen vereinbaren</a></div></div></section>
-</main>
-<footer class="footer">
-<div class="container footer-compact">
-<div class="footer-main-row">
-<a aria-label="BzpW Startseite" class="footer-logo" href="/">
-<img alt="BzpW" src="/assets/images/logo_small.png"/>
-</a>
-<nav aria-label="Fußnavigation" class="footer-nav-compact"><a href="/">Startseite</a><a href="/persoenliche-begleitung/">Persönlich</a><a href="/berufliche-begleitung/">IT &amp; Beruf</a><a href="/angebote/">Angebote</a><a href="/ueber-mich/">Über mich</a><a href="/impulse/">Impulse</a><a href="/kontakt/">Kontakt</a></nav>
-</div>
-<div class="footer-meta-row">
-<span>© 2026 BzpW · Ismail Özkabak</span>
-<nav aria-label="Weitere Links" class="footer-meta-links">
-<a href="https://www.linkedin.com/in/ismail-%C3%B6zkabak-82b035381/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-<a href="https://www.provenexpert.com/de-de/beratung-zur-persoenlichen-weiterentwicklung-bzpw/" rel="noopener noreferrer" target="_blank">ProvenExpert</a>
-<a href="/datenschutz/">Datenschutz</a>
-<a href="/impressum/">Impressum</a>
-</nav>
-</div>
-</div>
-</footer>
-<a class="mobile-cta" href="https://wa.me/4916091109935?text=Hallo%20Ismail,%20ich%20möchte%20gerne%20ein%20kostenloses%20Erstgespräch%20vereinbaren." rel="noopener" target="_blank">
+      </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Entscheidungsgespräch</span>
+          <h1>
+            Ein konkretes Thema. Eine fokussierte Sitzung. Ein klarer nächster
+            Schritt.
+          </h1>
+          <p class="lead">
+            Du möchtest eine persönliche oder berufliche Entscheidung
+            strukturiert betrachten. Im Entscheidungsgespräch ordnen wir die
+            wichtigsten Faktoren und erarbeiten eine Richtung, die zu dir passt.
+          </p>
+          <div class="fact-row">
+            <span class="fact">Eine fokussierte Sitzung</span
+            ><span class="fact">60 Minuten · 60 €</span
+            ><span class="fact">Online oder in Gräfenberg</span>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container split">
+          <div>
+            <span class="eyebrow">Das Gespräch passt zu dir, wenn</span>
+            <h2>
+              du aus vielen Gedanken eine klare Entscheidung entwickeln möchtest
+            </h2>
+            <ul class="recognition">
+              <li>du zwischen mehreren sinnvollen Möglichkeiten abwägst</li>
+              <li>Gefühl und Vernunft in unterschiedliche Richtungen weisen</li>
+              <li>du mögliche Folgen realistisch einschätzen möchtest</li>
+              <li>du dich auf ein wichtiges Gespräch vorbereitest</li>
+              <li>du einen beruflichen oder persönlichen Wechsel erwägst</li>
+            </ul>
+          </div>
+          <img
+            alt="Weg mit einer Abzweigung als Symbol für eine Entscheidung"
+            src="/assets/images/persoenlich.webp"
+          />
+        </div>
+      </section>
+      <section class="section section-soft">
+        <div class="container">
+          <span class="eyebrow">In der Sitzung</span>
+          <div class="grid-3">
+            <div class="card">
+              <h3>Situation ordnen</h3>
+              <p>
+                Wir sammeln Fakten, Gedanken, Gefühle und Interessen, die deine
+                Entscheidung beeinflussen.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Optionen prüfen</h3>
+              <p>
+                Wir betrachten Möglichkeiten, Auswirkungen und das, was dir
+                persönlich wichtig ist.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Schritt festlegen</h3>
+              <p>
+                Du gehst mit einer klareren Einschätzung und einem konkreten
+                nächsten Schritt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-cream">
+        <div class="container grid-2">
+          <div>
+            <span class="eyebrow">Rahmen</span>
+            <h2>Gezielt und flexibel.</h2>
+            <p class="price">60 €</p>
+            <p>
+              für 60 Minuten. Das kostenlose Kennenlernen dauert 30 Minuten.
+              Danach entscheidest du in Ruhe, ob du das Gespräch buchen
+              möchtest.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Weitere Begleitung</h3>
+            <p>
+              Manche Entscheidungen öffnen ein größeres Thema. In diesem Fall
+              können wir anschließend im Rahmen der persönlichen oder
+              beruflichen Begleitung weiterarbeiten.
+            </p>
+            <p>
+              <a class="card-link" href="/angebote/">Alle Angebote ansehen →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section section-cta">
+        <div class="container cta-band">
+          <div>
+            <h2>Welche Entscheidung beschäftigt dich?</h2>
+            <p>
+              Im kostenlosen Kennenlernen kannst du dein Anliegen kurz schildern
+              und prüfen, ob das Entscheidungsgespräch zu dir passt.
+            </p>
+          </div>
+          <div>
+            <a
+              class="button button-primary"
+              href="https://wa.me/4916091109935?text=Hallo%20Ismail,%20ich%20m%C3%B6chte%20gerne%20ein%20kostenloses%20Erstgespr%C3%A4ch%20vereinbaren."
+              rel="noopener"
+              target="_blank"
+              >Kennenlernen vereinbaren</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-compact">
+        <div class="footer-main-row">
+          <a aria-label="BzpW Startseite" class="footer-logo" href="/">
+            <img alt="BzpW" src="/assets/images/logo_small.png" />
+          </a>
+          <nav aria-label="Fußnavigation" class="footer-nav-compact">
+            <a href="/">Startseite</a
+            ><a href="/persoenliche-begleitung/">Persönlich</a
+            ><a href="/berufliche-begleitung/">IT &amp; Beruf</a
+            ><a href="/angebote/">Angebote</a
+            ><a href="/ueber-mich/">Über mich</a><a href="/impulse/">Impulse</a
+            ><a href="/kontakt/">Kontakt</a>
+          </nav>
+        </div>
+        <div class="footer-meta-row">
+          <span>© 2026 BzpW · Ismail Özkabak</span>
+          <nav aria-label="Weitere Links" class="footer-meta-links">
+            <a
+              href="https://www.linkedin.com/in/ismail-%C3%B6zkabak-82b035381/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a
+              href="https://www.provenexpert.com/de-de/beratung-zur-persoenlichen-weiterentwicklung-bzpw/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >ProvenExpert</a
+            >
+            <a href="/datenschutz/">Datenschutz</a>
+            <a href="/impressum/">Impressum</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <a
+      class="mobile-cta"
+      href="https://wa.me/4916091109935?text=Hallo%20Ismail,%20ich%20möchte%20gerne%20ein%20kostenloses%20Erstgespräch%20vereinbaren."
+      rel="noopener"
+      target="_blank"
+    >
       Kostenloses Erstgespräch
     </a>
-<script>
+    <script>
       const t = document.querySelector(".nav-toggle"),
         n = document.querySelector(".nav");
       if (t && n)
@@ -118,5 +298,5 @@
           t.setAttribute("aria-expanded", n.classList.contains("open"));
         });
     </script>
-</body>
+  </body>
 </html>
