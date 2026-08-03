@@ -1569,3 +1569,77 @@ main > .section.section--white {
 main > .section.section--mint {
   background: #eef5f1;
 }
+
+/* Typografische Verdichtung – August 2026
+   Die Desktop-Darstellung wird ruhiger und kompakter, ohne die mobile
+   Lesbarkeit oder die grundsätzliche Seitenstruktur zu verändern. */
+@media (min-width: 651px) {
+  h1 {
+    font-size: clamp(2.3rem, 4.25vw, 3.95rem);
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: clamp(1.65rem, 2.7vw, 2.35rem);
+    line-height: 1.18;
+  }
+
+  h3 {
+    font-size: 1.22rem;
+  }
+
+  p,
+  li {
+    font-size: 1rem;
+  }
+
+  .lead {
+    font-size: clamp(1.08rem, 1.55vw, 1.25rem);
+  }
+
+  .section {
+    padding: clamp(56px, 6.5vw, 88px) 0;
+  }
+
+  .hero {
+    padding: clamp(56px, 6vw, 82px) 0 clamp(62px, 6.8vw, 92px);
+  }
+
+  .hero h1 {
+    max-width: 790px;
+    font-size: clamp(2.45rem, 4.35vw, 4rem);
+    line-height: 1.08;
+  }
+
+  .hero-copy {
+    font-size: clamp(1.04rem, 1.25vw, 1.13rem);
+  }
+
+  .page-hero {
+    padding: 64px 0 52px;
+  }
+
+  .page-hero h1 {
+    max-width: 960px;
+    font-size: clamp(2.15rem, 3.55vw, 3.35rem);
+    line-height: 1.12;
+  }
+
+  .card {
+    padding: clamp(24px, 3vw, 34px);
+  }
+
+  .quote {
+    font-size: clamp(1.32rem, 2.25vw, 1.9rem);
+  }
+
+  .section-cta {
+    padding-top: clamp(32px, 4vw, 48px);
+    padding-bottom: clamp(48px, 5.5vw, 70px);
+  }
+
+  .quote-section {
+    padding-top: clamp(38px, 4vw, 54px);
+    padding-bottom: clamp(28px, 3vw, 42px);
+  }
+}
