@@ -1683,9 +1683,10 @@ main > .section.section--mint {
 }
 
 
-/* Erweiterung September 2026: drei Anwendungsfelder */
+/* Erweiterung September 2026: Kernangebot und ergänzende Formate */
 .offer-grid--pillars {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
 }
 .specific-offers {
   margin-top: 34px;
@@ -1704,6 +1705,11 @@ main > .section.section--mint {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
   margin-top: 20px;
+  align-items: stretch;
+}
+.offer-grid--pillars .offer-card,
+.specific-offers-grid .compact-card {
+  min-height: 100%;
 }
 .compact-card {
   display: flex;
