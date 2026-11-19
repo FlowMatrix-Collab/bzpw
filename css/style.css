@@ -1683,50 +1683,41 @@ main > .section.section--mint {
 }
 
 
-/* Erweiterung September 2026: Kernangebot und ergänzende Formate */
-.offer-grid--pillars {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: stretch;
-}
-.specific-offers {
-  margin-top: 34px;
-  padding-top: 30px;
-  border-top: 1px solid var(--line);
-}
-.specific-offers > h3 {
-  margin-bottom: 6px;
-}
-.specific-offers > p {
-  margin-top: 0;
-  max-width: 720px;
-}
-.specific-offers-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 20px;
-  align-items: stretch;
-}
-.offer-grid--pillars .offer-card,
-.specific-offers-grid .compact-card {
-  min-height: 100%;
-}
-.compact-card {
-  display: flex;
-  flex-direction: column;
-}
-.compact-card .card-link {
-  margin-top: auto;
-  padding-top: 12px;
-}
 @media (max-width: 1120px) and (min-width: 901px) {
   .nav-list { gap: 10px; }
   .nav-list a { font-size: 0.80rem; }
   .nav-logo img { width: 112px; }
 }
+
+
+/* Responsive Navigation: alle Einträge auch auf kleinen oder flachen Displays erreichbar. */
 @media (max-width: 900px) {
-  .offer-grid--pillars,
-  .specific-offers-grid {
-    grid-template-columns: 1fr;
+  .nav.open .nav-menu {
+    max-height: calc(100vh - 90px);
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
+  .nav.open .nav-list {
+    gap: 2px;
+    align-items: stretch;
+    padding: 4px 0;
+  }
+  .nav.open .nav-list a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 9px 4px;
+  }
+  .nav-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  main :is(h1, h2, h3),
+  .card-link, .footer-meta-links a {
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

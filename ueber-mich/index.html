@@ -32,18 +32,14 @@
 <a aria-label="BzpW Startseite" class="nav-logo" href="/">
 <img alt="BzpW, Beratung zur persönlichen Weiterentwicklung" height="134" src="/assets/images/logo_small.png" width="500"/>
 </a>
-<nav aria-label="Hauptnavigation" class="nav-menu">
+<nav aria-label="Hauptnavigation" class="nav-menu" id="hauptnavigation">
 <ul class="nav-list">
 <li>
 <a href="/berufliche-begleitung/">
         Berufliche Begleitung
        </a>
-</li><li><a href="/strategische-begleitung/">Strategische Begleitung</a></li>
-<li>
-<a href="/entscheidungsgespraech/">
-        Entscheidungsgespräch
-       </a>
-</li>
+</li><li><a href="/strategische-begleitung/">Strategisches Sparring</a></li>
+
 <li>
 <a href="/rauchfrei-werden/">Rauchfrei</a>
 </li>
@@ -64,7 +60,7 @@
 </li>
 </ul>
 </nav>
-<button aria-expanded="false" aria-label="Menü öffnen" class="nav-toggle">
+<button type="button" aria-controls="hauptnavigation" aria-expanded="false" aria-label="Menü öffnen" class="nav-toggle">
      ☰
     </button>
 </div>
@@ -76,7 +72,7 @@
       Über mich
      </span>
 <h1>Berufliche Erfahrung, strategisches Denken und ein genauer Blick auf den Menschen.</h1>
-<p class="lead">Ich bin Ismail Özkabak, Consultant, Coach, strategischer Sparringspartner und Autor. Ich begleite Menschen bei beruflicher Entwicklung, Entscheidungen und Veränderung und denke bei strategischen Vorhaben als Sparringspartner mit.</p>
+<p class="lead">Ich bin Ismail Özkabak, Consultant, Coach, strategischer Sparringspartner und Autor. Ich begleite Menschen, die Verantwortung tragen, etwas verändern wollen und gerade einen passenden Weg suchen. Dafür verbinde ich Coaching mit dem gemeinsamen Durchdenken beruflicher Situationen und Vorhaben.</p>
 </div>
 </section>
 <section class="section section--white">
@@ -102,7 +98,7 @@
        Mehrere Ebenen verbinden
       </h3>
 <p>
-       Ich betrachte sachliche, emotionale und situative Aspekte nicht getrennt voneinander, sondern verbinde sie zu einem Gesamtbild, in dem ihr Zusammenspiel sichtbar wird.
+       Wir betrachten Anforderungen und Abhängigkeiten ebenso wie deine Sichtweisen, Erwartungen und Gefühle. Gemeinsam prüfen wir, wie diese Ebenen zusammenwirken und wo sich Handlungsmöglichkeiten ergeben.
       </p>
 </div>
 <div class="card">
@@ -166,10 +162,10 @@
 </div>
 <div class="card dark">
 <h3>Wie ich arbeite</h3>
-<p>Je nach Anliegen wechsle ich bewusst zwischen Begleitung, Analyse und Sparring. Entscheidend ist für mich nicht das Etikett der Methode, sondern was dem Thema tatsächlich dient.</p>
+<p>Im Coaching unterstütze ich dich dabei, eigene Sichtweisen, Muster und Ziele zu verstehen. Im Sparring bringe ich zusätzlich meine Einschätzung ein und denke Optionen und Konsequenzen mit dir durch. Gemeinsam klären wir, was du für dein Anliegen brauchst.</p>
 <ul class="expectation-list">
-<li>Ich denke mit, statt ausschließlich Fragen zu stellen.</li>
-<li>Ich ordne, ohne Komplexität vorschnell zu vereinfachen.</li>
+<li>Ich stelle Fragen, denke mit und bringe meine Einschätzung ein.</li>
+<li>Ich ordne Zusammenhänge und behalte wichtige Abhängigkeiten im Blick.</li>
 <li>Ich bringe Beobachtungen ein und stelle sie gemeinsam mit dir auf den Prüfstand.</li>
 <li>Ich übersetze Erkenntnisse in konkrete und tragfähige nächste Schritte.</li>
 </ul>
@@ -289,10 +285,8 @@
       </a>
 <a href="/berufliche-begleitung/">
        Berufliche Begleitung
-      </a><a href="/strategische-begleitung/">Strategische Begleitung</a>
-<a href="/entscheidungsgespraech/">
-       Entscheidungsgespräch
-      </a>
+      </a><a href="/strategische-begleitung/">Strategisches Sparring</a>
+
 <a href="/rauchfrei-werden/">Rauchfrei</a>
 <a href="/ueber-mich/">
        Über mich
@@ -326,14 +320,6 @@
 </div>
 </div>
 </footer>
-<script>
-   const t = document.querySelector(".nav-toggle"),
-        n = document.querySelector(".nav");
-      if (t && n)
-        t.addEventListener("click", () => {
-          n.classList.toggle("open");
-          t.setAttribute("aria-expanded", n.classList.contains("open"));
-        });
-  </script>
+<script src="/assets/js/navigation.js" defer></script>
 </body>
 </html>
